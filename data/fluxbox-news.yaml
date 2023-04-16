@@ -1,0 +1,2218 @@
+---
+1439633176:
+  title: "Fluxconf2015 - Genesis of the 'There is no cabal!'"
+  author: Mathias
+  markup: markdown
+  content: |+
+
+    Much to the surprise of MOST (I think, ALL except two) fluxboxers on the
+    planet, a HUGE conference took place on 2015-08-13 in Heidelberg:
+
+    **Fluxconf2015!**
+
+    In case you missed the conference or were too late to grab the gold
+    tickets: You next chance will be in 2025, Fluxconf takes place only once 
+    in 10 years. If the moon is at the right position.
+
+    Right now, in Heidelberg / Germany, <a href="">DebConf2015</a> is taking 
+    place. A nice dude, who travels under the name "Paul ☃ Tagliamonte", 
+    happens to be there, for some 
+    <a href="https://portfolio.debian.net/result?email=paultag%40debian.org">absolutely</a> 
+    <a href="https://pault.ag/">unrelated</a>
+    <a href="http://opensource.org/docs/board-annotated#PaulTagliamonte">reason</a>.
+
+    Coincidentally, yours truly had things to do in Bonn / Germany, which is
+    relativly close to DebConf2015. So, in some kind of spontaneous mood, we
+    decided to just meet in person in Heidelberg.
+
+    Time was crucial and very limited. We managed to pack a lot of things into
+    the little we had: a keynote, several talks, a BoF regarding version 
+    numbers, evil master plans and a lot  more. And 
+    <a href="https://twitter.com/paultag/status/631854563243524096">beer</a>.
+    Obviously.
+
+    Sadly, we were too drunk and/or jetlagged (Paul was up 24hours already when
+    I arrived at his location) to take any pictures. So, you have to take my
+    word for it: it was great!
+
+1423400275:
+  title: "Fluxbox 1.3.7 - Bam! Zero Bugs!!11!"
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+
+    To release 1.3.6 ~ a month ago was a great success: A lot of you, our
+    users, who rarely run bleeding edge fluxbox.git, were confronted with
+    what was hidden in the git repository for almost 2 years. Due to the
+    lack of testing power there was no other way to get "massive"
+    feedback.  1.3.6 generated the feedback we needed to make 1.3.7. There
+    will be bugs, obviously, but we think 1.3.7 is in pretty good shape.
+    Without further ado:
+
+    Critical Bugfixes:
+
+    * Segfault on startup (mostly *BSD)
+    * Segfault on shutdown
+    * Segfault on clicking the Remember menu
+    * Menu crops on TypeAhead
+
+    Minor Bugfixes:
+
+    * \_NET\_REQUEST\_FRAME\_EXTENTS
+    * Working autorepeat keys
+    * Working vertical rotated Tabs and Toolbar
+    * Proper size of titlebar buttons on restart / detaching tabs
+    * Missing windowmenu works again
+    * Several glitches in the menu
+    * Correct handling of 'maximized' statement in the apps file
+
+    Features:
+
+    * The improved TypeAhead sytem is not limited to matches on beginning
+      of menu items anymore, the behavior is configurable:
+      * Nowhere - disables TypeAhead support
+      * ItemStart - matches typed text only at the start of a menu item
+      * Somewhere - matches typed text somewhere in a menu item
+        (Currently this is a configfile-only option)
+
+    * Minor tweaks to the i18n system
+    * Updated turkish translations
+
+    End User unrelated:
+
+    * Code refactoring and cleanup, assisted by Coverity and
+      clang static code analysis
+
+    Get it at the usual places, <a href="/download/">downloading the source</a>
+    is one option.
+
+1420534426:
+  title: "Fluxbox 1.3.6 - It's about time."
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+
+    After a long long long time it's finally time to give the world a new
+    release: 1.3.6. Many thanks to all the contributors who brought you:
+
+    Critical Bugfixes:
+
+    * Clocktool problems
+    * Rendering long text
+    * Race condition on shutdown
+    * Lost keypresses after workspace switch
+    * Corruption of fbrun-history
+
+    Minor Bugfixes:
+
+    * Resize and Move problems
+
+    Features:
+
+    * 'ArrangeWindowsStack' action
+    * Treat Windows with WM_CLASS == "DockApp" as DockApps
+
+    Minor:
+
+    * Updated translations (Bulgarian, Hebrew, Japanese)
+
+
+    Let it 'flux'! And a happy and successful 2015!
+
+1360750357:
+  title: "Fluxbox 1.3.5 - Damn logic!"
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+
+    A nasty, little bug went undiscovered into 1.3.3 and prevented the logic
+    commands from working. So, if you happen to use any of the logic commands
+    like 'if', 'and' or .. well .. 'or' in your keys-file: This is the release
+    that fixes that for you. Nothing else was added or fixed.
+
+    Sorry for the inconvinience!
+
+1360514053:
+  title: "Fluxbox 1.3.4 - bend physics back to reality"
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+
+    New year, new release. Since the fluxbox-1.3.4 contained a few rather nasty
+    bugs (some have labeled it "unlucky release" :)), here is the 100% bug free
+    version you should use from now on. No more time holes, sorry folks.
+
+    General:
+
+    * Added 'LHalf' / 'RHalf' titlebar buttons
+    * Added 'ClientPatternTest' command for testing clientpatterns via
+      fluxbox-remote
+    * Added 'he_IL' translations
+
+    Critical Bugfixes in 1.3.4:
+
+    * All timer based problems are fixed now
+    * Fixed integer overflows for some gradient textures
+    * Fixed compile issue on MacOS
+
+    Other Bugfixes:
+
+    * Correct renderinger of 'sunken' textures
+    * Move windows without the lagging-behind-effect on slower machines
+    * Improved color brightening in textures
+    * Memory and other code improvements in texture rendering code
+    * Fix build-system issues
+
+    Happy fluxboxing!
+
+1356897701:
+  title: "The world did not end - let's release 1.3.3"
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+    So, the world is still rotating around the sun and before our calendar hits
+    2013 we decided to release a new stable version of fluxbox. This is mostly
+    a bugfix release.
+
+    General:
+
+    * Added 'NearestCorner', 'NearestEdge' and 'NearestCornerOrEdge' resize methods
+    * Added percentage values for commands such as ResizeWindow
+    * Added style ressources 'menu.hilite.font', 'menu.hilite.justify'
+    * Added 'OnTab' modifier for keys file
+    * Added _MOTIF\_WM\_INFO atom to advertise motif capabilities
+    * Added 'fullscreen', 'maximizedhorizontal', 'maximizedvertical' tests to client patterns
+    * Added option to revert focus to previous window only on current head in a multi-monitor setup
+    * Rewrite of FbTk::TextureRenderer (simpler code)
+    * Improved building on Microsoft Windows
+
+    Critical Bugfixes:
+
+    * Use of monotonic increasing clock for timer, not affected by leap seconds etc.
+
+    Other Bugfixes:
+
+    * Fixed placement off transient windows in a multi-monitor setup with 'holes'
+    * Fixed usage of '~' as part of style filenames
+    * Replaced (deprecated) XKeycodeToKeysym() with XkbKeycodeToKeysym()
+    * Improved vertical alignment of text in decorations
+    * Fixed compiler and code style issues
+    * Updated italian translations
+
+    Happy fluxboxing, great health, luck and everything else for 2013!
+
+1319967230:
+  title: "Short and sweet and to the point: 1.3.2"
+  author: The Fluxbox team
+  markup: markdown
+  content: |+
+
+    Today the fluxbox team is very happy to announce a new release of fluxbox 1.3.2
+
+    After a very successful participation in GSOC2011 (we will report more soonish)
+    and right before we are starting our (slow turning, point taken) engines to 
+    integrate the result of the two GSOC2011 projects into the main line (which might
+    be a bit bumpy), we wanted something more stable for you.
+
+    Both Pavel and Gediminas, our GSOC2011 participants, contributed to this release
+    all over the place. Most notably, Gediminas added ARGB32 visuals to fluxbox (so, yes, your 
+    cairo-dock now looks awesome again). And Gediminas cleaned up some gory old code
+    mess and fixed some crashes along the road.
+
+    So, happy release and happy fluxboxing!
+
+1300621508:
+  title: GSOC2011... fluxbox participates!
+  author: Mathias
+  markup: markdown
+  content: |+
+
+    ![GSOC Logo][lgsoc]
+
+    Your beloved and trusted windowmanager got accepted as a mentoring
+    organization on the [Google-Summer of Code][gsoc]. For those of you
+    living under a rock, I will briefly describe the general idea of
+    GSOC:
+
+        You work fulltime on a fluxbox related project over the summer
+        and get paid by Google. Yes, paid. Money.
+
+    At the moment we are working on filling out some related paper work
+    (eg, application templates), but you can have a look at some
+    [project ideas][fsoc] we have. You can read more about the next steps
+    for you and us at [Google's blog][bgsoc].
+
+    This is the first time we tried to become part of SOC and we are very
+    happy to see this happen.
+
+    [gsoc]: http://www.google-melange.com/gsoc/program/home/google/gsoc2011
+    [bgsoc]: http://google-opensource.blogspot.com/2011/03/mentoring-organizations-for-google.html
+    [lgsoc]: GSOC_2011.png
+    [fsoc]: http://fluxbox.org/gsoc2011/
+
+1298829654:
+  title: Just as promised... 1.3.1!
+  author: Mathias
+  markup: markdown
+  content: |+
+    Getting the 1.3.0 out of the door brought up some hidden bugs, we tried
+    hard to catch most of them in the last week. Since that went very well,
+    we have a new release for you:
+
+    Critical Bugfixes:
+
+    * Fix for not hiding submenus if menuDelay is set.
+    * Fix crash when moving transient windows (Dialogs) between Workspaces,
+      #3088856.
+    * Fix crash when SystemTray was rotated 90/270 degree, #3188223.
+    * Fix potential crash when gettting an UnmapEvent before a FocusEvent.
+    * Fix potential crash on accessing NULL-pointer.
+
+    Other Bugfixes:
+
+    * Fix wrong width calculation of Systemtray, #3150939.
+    * Fix initial placement of WindowMenu, #2731524.
+    * Fix incorrectly shown alpha values in Menus, #3187373.
+    * Fix render 'sunken' Textures correctly.
+
+    Personal note from Mathias: This is the first time 'fluxgen' was not
+    able to get this release out of the door himself. He has injured himself
+    by trying something a real hacker should never be allowed: Leave the
+    keyboard. So, best whishes from here towards Henrik!
+
+1298141402:
+  title: You didn't see that coming, did you?
+  author: The Fluxbox Team
+  markup: markdown
+  content: |+
+    Fluxbox 1.3 has arrived! A long long long time is over, and we finally
+    decided to make a release.
+
+    * Added support for bidirectional text, #2801836.
+    * Allow to override 'Focus New Windows' via .fluxbox/apps
+    * New actions:
+      * ActivateTab
+      * ArrangeWindowsVertical
+    * New 'MoveN' and 'ClickN' action support for keys file
+    * New focus model 'StrictMouseFocus'. This will affect focus when
+      closing, moving, lowering windows, changing desktops, etc, whereas the
+      'MouseFocus' model will only change focus when you move the mouse.
+    * New "background: unset" property for use in overlays.
+    * Allowing relative paths for background images in style files.
+    * Allowing matching screen number in ClientPattern.
+    * Removed rootcommand from init, as fbsetbg is run automatically nowadays.
+    * Removed line style resources from init file.
+
+    In any case, we hope to get more into the 'flux' way of doing things, aka
+    release early and often. So, have fun with this release.
+
+    Personal note from Mathias: This one is dedicated to the first official
+    'fluxbaby' on the planet: my daughter Karo, born on 6th of November 2010.
+    Which is, btw, the birthday of Henrik as well :)
+
+1221801892:
+  title: kaCHUNK!
+  author: The Fluxbox Team
+  content: |+
+    As announced, we have started a new development cycle. So, it is time for 
+    a new release: 1.1.1. It fixes some important issues discovered since the 
+    last release. Go and grab it from the usual place and ... happy fluxboxing!
+
+1220551971:
+  title: New Development Release 1.1.0
+  author: The Fluxbox Team
+  content: |+
+    This is the first release of the new development release cycle.
+    A lot has happened since 1.0.0 so check out all the new features in the NEWS
+    file.
+
+    p(). "http://fluxbox.org/download/":http://fluxbox.org/download/
+
+1210829385:
+  title: New Website
+  author: The Fluxbox Team
+  content: |+
+    In case you can't tell, we have a new website. Huzzah!
+
+    If you need some of the old content, go over to
+
+    p(). "http://old.fluxbox.org":http://old.fluxbox.org.
+
+    Many thanks fly over to famous "tenner":http://tenr.de who
+    made the redesign.
+
+1198672560:
+  title: A xmas gi(f)t
+  author: Mathias
+  content: |+
+    The fluxbox team has decided to switch over to "git":http://git.or.cz/ 
+    for version control. You can surf the official repository at
+
+    p(). "http://git.fluxbox.org":http://git.fluxbox.org/
+
+    and can grab your own copy of the whole project by cloning it via
+
+    <pre>git clone git://git.fluxbox.org/fluxbox.git fluxbox.git</pre>
+
+    We hope to bring up a new version of the homepage soonish (planning first
+    month of the next year). Aside from all this "meta" stuff Mark did
+    an excellent job by hunting down lots of bugs while the rest of the crew
+    is a bit busy with real life jobs, so the team wants to send a big hug
+    over to Mark :)
+
+    For the rest of you: we wish you a good time with your family and a happy
+    new year.
+
+1192132800:
+  title: fbdesk 1.4.1
+  author: Henrik
+  content: |+
+    A new fbdesk release. This release fixes the flickering issue with the 
+    latest fluxbox release and parsing of the icon file. 
+
+    Check it out "here":fbdesk/.
+
+1191877200:
+  title: Fluxbox 1.0.0
+  author: Henrik
+  content: |+
+    A new stable release! Finally after almost four and a half years with
+    0.9.x release we got to 1.0.0! This release includes a lot of bugfixes,
+    new styles, updated language support, better shaped corners and much more.
+
+    p(). Grab it "here!":download/
+
+    More info about the release "here":version-0.9.php
+
+    We will soon update the entire webpage, so stay tuned!
+
+1174420500:
+  title: Fluxbox 1.0 Release Candidate 3
+  author: Henrik
+  content: |+
+    This release has lots of new feature and lots of bug fixes.
+    More extended window manager hints support, support for mouse buttons in keys file,
+    language updates and much more. See ChangeLog and NEWS file more details. <br>
+    Download and info <a href="version-0.9.php">here</a>.
+    <br>
+    This is the final release candidate, the next release will be 1.0.0 stable! So please
+    help us and report the <a href="https://sourceforge.net/tracker/?group_id=35398&atid=413960">Bugs</a> you find in this release.
+
+
+1151904180:
+  title: Fluxbox 1.0 Release Candidate 2
+  author: Simon
+  content: |+
+    With numerous fixes and improvements from the first RC. Please work it out
+    hard and let us know about any <a href="https://sourceforge.net/tracker/?group_id=35398&atid=413960">Bugs</a>. You can find news on the changes
+    in <a href="version-0.9.php">the usual place</a>, and download from the <a href="download.php">Downloads</a> page.<br />
+    <b>UPDATE</b>: There were some crashes on startup reported on Solaris and FreeBSD. Please <a href="download/patches/fluxbox.fix_iconvmenu_crash.patch">use this patch</a> to resolve them.
+
+
+1150272180:
+  title: A new developer to the team!
+  author: Henrik
+  content: |+
+    We would like to welcome Mark Tiefenbruck to the development team. He
+    has been around and contributing useful bug fixes and features for a
+    while now. You might know him from such patches as... key modes and toggle
+    items, plus many other welcome fixes and improvements.
+
+1150229940:
+  title: "New Release: 1.0rc !"
+  author: Henrik
+  content: |+
+    1.0 release candidate is finally here! Check out news "here":version-0.9.php.
+
+    Download it "here":http://prdownloads.sourceforge.net/fluxbox/fluxbox-1.0rc.tar.bz2.
+
+    This release has better support for EWMH:docs/ewmh-support.html and UTF-8.
+    It also includes the old external tabs!
+
+    Before next release we need people to help us with translation. We also
+    need people to report bugs and other issues with the changed setup. Do
+    not forget to include language setting, OS and distribution in the report.
+
+
+1144186860:
+  title: "New Release: 0.9.15.1"
+  author: Simon
+  content: |+
+
+    New bugfix version <a href="version-0.9.php">0.9.15.1</a> of Fluxbox! Check out the changes <a href="version-0.9.php">here</a>.
+    Most notably, this improves friendliness of handling the background image.
+
+
+
+1143491640:
+  title: New FbDesk version 1.4.0 !
+  author: Henrik
+  content: |+
+    Check it out "here!":fbdesk/index.php
+
+1143068400:
+  title: "New Release: 0.9.15"
+  author: Henrik
+  content: |+
+    New version "0.9.15":version-0.9.php of Fluxbox! Check out the changes
+    "here":version-0.9.php. We are getting one step closer to 1.0 release.
+
+
+1142011260:
+  title: Window Manager of the Year!
+  author: Henrik
+  content: |+
+    <a href="http://www.linuxquestions.org/questions/showthread.php?t=409027">2005 LinuxQuestions.org Members Choice Award </a>
+    Thanks to all fluxbox users out there.
+
+
+1135465080:
+  title: Happy X-Mas!
+  author: Mathias
+  content: |+
+    The whole fluxbox-team wishes all of you out there a nice, calm and peaceful xmas.
+
+
+1131528660:
+  title: Wiki for the Masses
+  author: Mathias
+  content: |+
+    The friendly folks at <a href="http://fluxbox-wiki.org">http://fluxbox-wiki.org</a> started a <a href="http://google.com/search?q=define:wiki">Wiki</a> to bring together all the Howtos and unanswered questions in one place controlled by the users .. well .. YOU :) . Have fun with it and happy fluxboxing!
+
+1127508360:
+  title: Official Fluxbox Merchandise!
+  author: Henrik
+  content: |+
+    !fbox_shirt.png! Ever wanted to show your sympathy with fluxbox on a conference or need a present for your geekish Friend? 
+    Well, our new shop is open: 
+
+    p(). "fluxbox.spreadshirt.net":http://fluxbox.spreadshirt.net/ 
+
+    With every item you order you'll support the team a bit.
+
+    Happy fluxboxing!
+
+    *UPDATE*
+
+    The international site for fluxbox shop is now open. Non-EU users can now
+    shop for fluxbox merchandise!
+
+    p(). "fluxbox.spreadshirt.com":http://fluxbox.spreadshirt.com/
+
+1126745640:
+  title: "New Release: 0.9.14"
+  author: Simon
+  content: |+
+    We're happy to announce version <a href="version-0.9.php">0.9.14</a> of Fluxbox. Check out the main changes <a href="version-0.9.php">here</a>... most notable is a bunch of work on font handling (no more big delays on startup).
+
+
+1125041820:
+  title: Fluxbox at LUGParanaConf
+  author: Mathias
+  content: |+
+    On 17th september there will be the 1st conference about free software in the city of Parana, Argentina. The LUGParanaConf is organized by LUGParana (<a href="http://www.lugparana.com.ar">www.lugparana.com.ar</a>). At the conference <b>Guillermo Patterer</b> will <a href="http://conf.lugparana.com.ar/node/2#">speak</a> about Fluxbox in one of the sessions. It will be orientated towards beginners and intermediate users, going from installation to configuration of Fluxbox. To read more about LUGParanaConf visit <a href="http://conf.lugparana.com.ar">conf.lugparana.com.ar</a>, everyone is invited to step by.
+    <p>
+    The Fluxbox-Team sends best wishes and good luck to the fluxboxlovers of argentina ... we are looking forward to see some pictures from that conference :) Happy Fluxboxing!
+
+1115993160:
+  title: "New Release: 0.9.13"
+  author: Mathias
+  content: |+
+    The Fluxbox-Team is very proud and happy to announce the release of <a href="/version-0.9.php">0.9.13</a> ... just in time for friday the 13th :) We put a lot of effort into this release to make it the most stable and fastest fluxbox so far, check <a href="/changelog.php">for yourself</a>. We have closed many bugs, added some features and ripped out some slow things. Have fun to try it out.
+
+1115991000:
+  title: Styles for the Masses
+  author: Mathias
+  content: |+
+    For those of you who are always searching for the best style for fluxbox
+    maybe these two sites are pretty interesting: 
+
+    * "-http://boxwhore.org/-":http://boxwhore.org/
+    * "http://customize.org/":http://customize.org/
+
+    ... you fancy l337 h4x0rs out there :)
+
+1114165440:
+  title: Current Activities
+  author: Mathias
+  content: |+
+    No, we are not dead :) Behind the scenes we are hunting those ugly, nasty
+    little hobits ..... aeh ... BUGS and add some new features, eg there might
+    be "Type-Ahead":http://www.mozilla.org/access/type-ahead/ for the menu
+    pretty soon. Another idea already tested by some brave folks from
+    \#fluxbox is the "CommandTool":http://darkshed.net/paste/shot-2005-03-17-144707-1024-768.jpg,
+    kind of fluxbox-commandline for the toolbar. Simon is currently busy with bringing fluxbox's hunger 
+    for memory down, still some issues to solve but it looks very promising so far.
+    Our little "fbot":http://core.fluxbox.org/~fbot/ has a new home: core.fluxbox.org, 
+    big thanx to 'car' who 'gave' us that box. I made some "WebButtons":http://darkshed.net/news/29/fluxbox-buttons-- 
+    you can freeely use to show the world that you are a fluxboxer :) 
+    And maybe there are some more things coming up, running secretly behind the scenes ... stay tuned!
+
+    Happy Fluxboxing :)
+
+1109749260:
+  title: Window Manager of the Year!
+  author: Henrik
+  content: |+
+    <a href="http://www.linuxquestions.org/questions/t272101.html">2004 LinuxQuestions.org Members Choice Award </a>
+
+1106006940:
+  title: Development release v0.9.12!
+  author: Simon
+  content: |+
+    A new development release is available with new features
+    and bugfixes. Worth noting is the new (optional) imlib2 support - compile with
+    <code>--enable-imlib2</code> for support for <code>PNG</code>, <code>JPG</code>
+    etc pixmaps.
+
+    Check it out "here":http://www.fluxbox.org/version-0.9.php.
+
+1105685100:
+  title: Writing a new fluxbox - manpage
+  author: Mathias
+  content: |+
+    <p>Hello folks, </p>
+    <p> as many of you know (or not): The current manpage of fluxbox is a bit
+    behind whats currently inside fluxbox and thus, it needs a
+    facelifting, refreshing and shiny new colors. Curt Micol, widely known
+    as Asenchi, has started a tiny subproject, called "newfluxman":
+    <br><br>
+    &nbsp;&nbsp;<a href="http://www.asenchi.com/misc/newfluxman.txt">http://www.asenchi.com/misc/newfluxman.txt</a>
+    <br><br>
+    Thats actually what he has written so far. We (the fluxboxteam) would
+    like to encourage anyone of you, who is interested in contributing to
+    that new manpage, to write ideas, thoughts, sections and whatnot to
+    <br><br>
+    &nbsp;&nbsp;&lt;asenchi [ta] asenchi [tod] com&gt;
+    <br>
+    </p>
+    Cheers and happy fluxboxing!
+
+1104819720:
+  title: italian documentation
+  author: grubert
+  content: |+
+    Thanks to Andrea Franchi, is finished. "html online":docbook/it/html/index.html
+
+1103880300:
+  title: Happy X-Mas 2004
+  author: Mathias
+  content: |+
+    The fluxbox-team wants to send out best xmas-wishes to all the fluxers around,
+    may your presents be as l33t as wanted :) Have a nice and wonderful time.
+
+1103294640:
+  title: documentation
+  author: grubert
+  content: |+
+    Thanks to Colville Mei, documentation in "simplified
+    chinese":docbook/zh_cn/html/index.html is finished, the html is online.
+    Greek is on the way.
+
+1102501860:
+  title: Saint Nicholas was there ...
+  author: Mathias
+  content: |+
+    and brought us all a present. Those of you who were good kids in the past
+    and put a clean boot out of the "front
+    door":http://en.wikipedia.org/wiki/Saint_Nicholas#Saint_Nicholas_the_Festive_Gift-Giver
+    already have it. But has he saw how many of you just forgot to put clean
+    boots out he decided to give it to all of you:
+
+    p(). *fluxbox-0.9.11*
+
+    It includes many, many bugfixes and some new features .. so go and get it
+    quick :) Cheers,
+
+1101737040:
+  title: documentation
+  author: grubert
+  content: |+
+    Thanks to Colville Mei, documentation in
+    <a href="docbook/zh_cn/html/index.html">simplified chinese</a>
+    is (partially) added. Proofreading of any documentation is appreciated very much.
+
+1100559180:
+  title: Repository is moved.
+  author: Mathias
+  content: |+
+    The move is done, "maybe" some minor reordering will be done. Anyway, you can surf the repository
+    on <a href="http://developer.berlios.de/projects/fluxbox/">http://developer.berlios.de/projects/fluxbox/</a>.
+    To read more about Subversion itself, consult either <a href="http://subversion.tigris.org">http://subversion.tigris.org</a> or the <a href="http://svnbook.red-bean.com/">svn-book</a>.
+
+    Cheers :)
+
+1100540520:
+  title: Repository Changes
+  author: Mathias
+  content: |+
+    Hi Folks,
+
+    At the moment we are moving the our cvs-repository from sourceforge.net to
+    a subversion based repository at <a
+        href="http://developer.berlios.de/projects/fluxbox/">berlios.de</a>.  We are doing this for
+    serveral reasons:
+
+    <ul>
+        <li>subversion is a pretty nice cvs-replacement with several
+        advantages</li>
+        <li>recurring problems with the cvs-repository hosted on sf.net
+            <ul>
+                <li>speed</li>
+                <li>anonymous cvs is hours behind developer cvs</li>
+                <li>reliability</li>
+            </ul>
+        </li>
+    </ul>
+
+    The fluxbox.org site will remain hosted at sf.net along with the
+    bugtracker, only the cvs-repository will be moving.
+
+    For those that may be afraid of learning yet another tool, we believe you
+    will find <a href="subversion.tigris.org">Subversion</a> to be similar to cvs in usage considering the interface,
+    but faster and friendlier as a whole.
+
+    Thank you for your patience in this move.
+
+1095594480:
+  title: Icons in menu?
+  author: aleczapka
+  content: |+
+    <a href="mailto:mark@brier.me.uk">Mark Brier</a> asks on fluxbox-users mailing list:
+    <I>
+    I'm using fluxbox-0.9.10-r2 and boy does it look good! What I'd like to
+    know, is how to use icons in the menu. It would seem that you create
+    ~/.fluxbox/icons and put .xpm icons into that folder named aterm.xpm,
+    xmms.xpm etc.
+    <br><br>
+
+    This doesn't work out-of-the-box, and someone on forums.gentoo.org
+    mentioned that the icon needs to be referenced in the menu file.
+    <br><br>
+
+    Does anyone know the syntax for this?
+    </I>
+    <a href="http://sourceforge.net/mailarchive/message.php?msg_id=9559354">Read the answers here</a>.
+
+1094033940:
+  title: Development release v0.9.10!
+  author: Henrik
+  content: |+
+    A new development release is available with new features
+    and bugfixes.
+    Check it out  <a href="http://www.fluxbox.org/version-0.9.php">here</a>.
+
+
+1093428840:
+  title: New developer
+  author: Henrik
+  content: |+
+    The Fluxbox Team would like to welcome Mathias Gumz to the development team.
+    Mathias Gumz (aka akira) has been a long time fluxbox user and has been sending
+    a lot of feature/bugfix patches through the years, and we are happy to have him on the team.
+
+1086705060:
+  title: Fluxbox 1000 days old!
+  author: Simon
+  content: |+
+    Just 2 days ago was 1000 days since Henrik first registered fluxbox as a
+    project on sourceforge. Cast your mind ("or browser":http://sourceforge.net/project/shownotes.php?release_id=52557) 
+    back to those early days when bbkeys was first integrated.
+
+    Haven't we "come a long way.":http://sourceforge.net/project/showfiles.php?group_id=35398&package_id=27561
+    Well done Henrik, and all involved in its evolution along the way! We look forward
+    to version 1.0 Real Soon Now! :)
+
+1083056400:
+  title: GCC 3.4 patch
+  author: Henrik
+  content: |+
+    Use <a href="http://fluxbox.org/download/fluxbox-0.9.9-gcc3.4.patch">this</a>
+    patch to compile fluxbox 0.9.9 with gcc 3.4. Apply it in fluxbox-0.9.9
+    directory with: patch -p0 < fluxbox-0.9.9-gcc3.4.patch
+
+1082980980:
+  title: Development release v0.9.9!
+  author: Henrik
+  content: |+
+    A new development release is available with new features
+    and bugfixes.
+    Check it out  <a href="http://www.fluxbox.org/version-0.9.php">here</a>.
+
+1080513000:
+  title: FbPager
+  author: Henrik
+  content: |+
+    Nice pager for fluxbox: "Fbpager":fbpager/
+
+
+1080512700:
+  title: Window Manager of the Year!
+  author: Henrik
+  content: |+
+    "Premio Softonic al mejor programa del a\xF1o 2003":http://www.softonic.com/premios/premios2003_linux.html
+
+1074429300:
+  title: Donate to the Fluxbox project
+  author: Henrik
+  content: |+
+    Make a donation to the Fluxbox project:<br>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="fluxgen@fluxbox.org">
+    <input type="hidden" name="item_name" value="Fluxbox">
+    <input type="hidden" name="no_note" value="1">
+    <input type="hidden" name="currency_code" value="EUR">
+    <input type="hidden" name="tax" value="0">
+    <input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+    </form>
+
+1074171600:
+  title: Window Manager of the Year!
+  author: Henrik
+  content: |+
+    <a href="http://www.linuxquestions.org/questions/showthread.php?s=&threadid=116368">2003 LinuxQuestions.org Members Choice Award </a>
+
+1074171300:
+  title: Development release v0.9.8!
+  author: Simon
+  content: |+
+    A new development release is available. This is primarily due to a fix
+    for a nasty memory leak in 0.9.7 (uses up lots of X memory).
+    A new feature is the transparent toolbar, along with a number of other
+    bugfixes.
+    Check it out  <a href="http://www.fluxbox.org/version-0.9.php">here</a>.
+
+1074112200:
+  title: Source code documentation updated
+  author: Henrik
+  content: |+
+    "Check it out":http://fluxbox.org/docs/devbox/
+
+1073213400:
+  title: Development release v0.9.7!
+  author: Simon
+  content: |+
+    Time passes, and a new development release is available
+    "here":http://www.fluxbox.org/version-0.9.php. New features include new
+    binding actions, the return of the "Send To" menu, extra configurability
+    options and some included pixmap styles. Bug fixes include the sloppy
+    focus dropping, and the mozilla focus bug.  Enjoy!
+
+1072523700:
+  title: Russian documentation uploaded "here":docbook/ru/html/.
+  author: grubert
+  content: |
+
+
+1069046100:
+  title: Development release v0.9.6!
+  author: Simon
+  content: |+
+    Version 0.9.6 of fluxbox is out with new features like configurable
+    toolbar tools, toolbar buttons (and theme items), new key commands, a
+    startup script to help out, nearest-quadrant resizing, and
+    of course bug fixes and optimisations.
+    Check it out <a href="version-0.9.php">here</a>
+
+1068815700:
+  title: Fluxbox and gnome-settings-daemon (SOLVED)
+  author: aleczapka
+  content: |+
+    Several people have sent info about <a href="http://www.muhri.net/nav.php3?node=gts">gtk+/gtk2 theme switcher</a>, which does exacly the job. <a href="mailto:fopref&#64;lanrules.de">Johannes Jordan</a> wrote a very helpfull answer:
+    <blockquote>
+    As asked for in the news, I want to give you a hopefully helping answer.
+    <br><br>
+
+    I think what you mean is how to select a nice looking theme for gtk+(2)
+    without gnome 2. themes are everything about the look of gtk+.
+    <br><br.
+
+    There is a tool called Gtk Theme Switch. It's website is
+    <a href="http://www.muhri.net/nav.php3?node=gts">http://www.muhri.net/nav.php3?node=gts</a>.
+    <br><br>
+
+    It works in the command line but also has a nice minimalistic GUI.
+    <br><br>
+
+    It is available as 'gtk-theme-switch' debian package. In the testing and
+    the unstable branch, it is already up to date and capable of switching
+    gtk2 themes (command switch2 for this). in stable branch, there is an
+    older version only supporting gtk1.
+    <br><br>
+
+    If you want to do it yourself, you can edit the .gtkrc-2.0 file in your
+    home directory. it can be written like a theme file (every gtk theme is
+    a gtkrc file, most themes use a so called theme engine - the gtkrc
+    file tells to load the specific lib) and it can also have an include
+    command for the gtkrc of an installed theme. mine look like follows:
+    <pre>
+    # --
+    include "/usr/share/themes/ThinIce/gtk-2.0/gtkrc"
+    # --
+    </pre>
+    <br>
+
+    There IS another command available to load themes (telling only the name
+    without the path etc., i.e. "ThinIce"), but I can't remember it now.
+    <br><br>
+
+    If you want to change stuff declared (or even not declared) in the
+    theme's gtkrc without editing the theme (which could be overwritten on
+    updates etc) you can add this to your .gtkrc-2.0 after the include as
+    well. good thing for using another font...
+    <br><br>
+    </blockquote>
+
+    <a href="mailto:roman&#64;isoTree.com">Roman Meytin</a> adds: You
+    If you use gentoo you can <code>'emerge x11-themes/gtk-theme-switch'</code>.
+    You can also use 'qtconfig,' which I believe comes with QT to perform
+    similar actions on QT/KDE applications.
+    <br><br>
+    Thanks all for the quick answers.
+
+1068407340:
+  title: Fluxbox and gnome-settings-daemon
+  author: aleczapka
+  content: |+
+    <a href="mailto:torn&#64;autistici.org">Torn asks</a>: <i>I was reading the <a href="/docs/en/faq.php">fluxbox faq</a> and found what I was looking for:<br>
+    <b>Q</b>: Gtk2/Gnome2 applications look wired under Fluxbox, but they look ok
+    when gnome is started<br>
+    <b>A</b>: Run gnome-settings-daemon when Fluxbox starts, eg. put this into your
+    ~/.xinitrc
+    <br><br>
+
+    Well, it works, but I'm using and enjoying fluxbox exactly because it
+    doesn't require tons of libraries and tools I just don't need. I want
+    just a bar and a menu, nothing less, nothing more.
+    <br><br>
+
+    I'm using debian, and installing gnome-control-center (which contains
+    the settings-daemon) requires me to install more then 30 other packages!
+    I was wondering if exists another tool like gnome-setting-daemon, or an
+    hack to simulate it, in order to get gtk2 apps look nice without
+    installing loads of unuseful things.
+    <br><br>
+
+    Thank you in advance, and keep on the good work, fluxbox rocks. </i>
+    <br><br>
+
+    Good question indead, do you know such tool? If so please <a href="mailto:aleczapka&#64;users.sourceforge.net">write me back</a>.
+
+
+1067356620:
+  title: Man page update
+  author: grubert
+  content: |+
+    Updated command section in <a href="docbook/en/html/fluxbox-man.html">manpage</a>.
+
+
+1064925840:
+  title: "fbstyle: Fluxbox Style Validator"
+  author: aleczapka
+  content: |+
+    This is very nice tool for all theme authors outhere.
+    "fbstyle":http://biz.dyndns.org/~jbisbee/fbstyle.cgi will check
+    your theme and tell you if something is wrong with it.  Right now I just
+    accept the text style file, but eventually it will take
+    a style tarball and will validate (checking the background image, and
+    pixmaps to make sure there aren't any missing files. Sounds great, right?
+
+    "Check it here":http://biz.dyndns.org/~jbisbee/fbstyle.cgi and don't forget to 
+    "report bugs to Jeff":mailto:fluxbox-users&#64;jbisbee.com.
+
+1064924760:
+  title: New release of marbles-like Fluxbox icons.
+  author: aleczapka
+  content: |+
+    <img src="/download/propaganda/marbles-style-icons/48x48/fluxbox-red.png" align=left>
+    <a href="mailto:madmaxjr&#64;kolumbus.fi">Jouni Rinne</a> has released v0.2 of his <A href="/download/propaganda/marbles-style-icons/">marbles-like Fluxbox icons</a> with new maroon icons. <a href="/download/propaganda/marbles-style-icons/">Get it here</a>.
+
+
+1064922660:
+  title: fluxbg (FLuxbox Background)
+  author: aleczapka
+  content: |+
+    "fluxbg":http://fluxbg.sourceforge.net/ is a tool for a comfortable
+    changing of the background under the fluxbox windowmanager 0.1.x and
+    0.9.x. Check the "screenshots":http://fluxbg.sourceforge.net/snap.php and
+    "get it here":http://sourceforge.net/projects/fluxbg/.
+
+
+1064922540:
+  title: fluxbox.vim
+  author: aleczapka
+  content: |+
+    Good news to all vim & fluxbox fans. I found today <a href="http://vim.sourceforge.net/scripts/script.php?script_id=679">vim's syntax file for Fluxbox menu</a>. Note: execute <code>:set syntax=fluxbox</code> after you open fluxbox menu to apply syntax highlighting.
+
+1062961200:
+  title: FAQ updated, new devel release FAQ
+  author: aleczapka
+  content: |+
+    I've updated <a href="/docs/en/faq.php">Fluxbox FAQ</a> and added <A href="/docs/en/faq-dev.php">Fluxbox Development Release FAQ</a> where you can find info on how to enable rounded corners, fix the toolbar or which terminal do I use. ;)
+
+
+1062708000:
+  title: Fluxbox on TechTV!
+  author: aleczapka
+  content: |+
+    <a href="mailto:matt&#64;offmyserver.com">Matt Olander</a> writes:
+    <i>Today Murray Stokely, the Chief Release Engineer for FreeBSD, and myself
+    did a FreeBSD vs. Linux 'shootout' on the technology network TechTV,
+    on their most popular show, The Screen Savers.
+    <br><br>
+
+    The linux guys installed a typical KDE desktop but we wanted something
+    that looked a bit cooler and since I've been a Fluxbox user for
+    sometime, we demo'd Fluxbox as our windowmanager.
+    <br><br>
+
+    It was a HUGE hit and I've already gotten a ton of emails regarding
+    Fluxbox. Hopefully, you saw a spike in your website traffic today.
+    <br><br>
+
+    It will re-air on TechTV Wednesday, September 3rd, at 9am PST.
+    I don't have a digital copy of the clip (yet!) but will probably have
+    one on our website soon.</i>
+    <br><br>
+
+    Is it cool or what? :) Check the <a href="http://www.techtv.com/screensavers/linux/story/0,24330,3511343,00.html">TechTV website</a>. Thx <a href="mailto:klausman-fluxbox&#64;tuts.net">Tobias</a> for forwarding the email.
+    <b>UPDATE 07.09:</b> The <a href="http://www.offmyserver.com/cgi-bin/store/news/techtv_090303.html">TechTV clip can be found here</a> (.rm - you need to <a href="http://realforum.real.com/cgi-bin/unixplayer/wwwthreads.pl">get REALONE player</a> to watch it).<br>
+    <b>UPDATE 10.09:</b> <a href="http://149.156.144.85/~jps/freebsd_vs_linux_shootout-techtv-20030902.avi">Get .avi version here</a>. Thx fabokzs for the link.
+
+
+1062613200:
+  title: New goodies!
+  author: aleczapka
+  content: |+
+    I've updated our <a href="/download.php">download</a> page.
+    You can find there, <a href="/download/propaganda/">propaganda</a> (Fluxbox icons, logos, buttons, etc) and <a href="/download/dotfiles/">dotfiles</a> (configurations files) sections.
+    If you want to submit your own dofiles or fluxbox graphics just <a href="mailto:aleczapka&#64;users.sourceforge.net?subject=Fluxbox">drop me an email</a>.<br>
+    Thx <a href="mailto:madmaxjr&#64;kolumbus.fi">Jouni Rinne</a> for contributing <A href="/download/propaganda/marbles-style-icons/">marbles-like Fluxbox icons</a>.
+
+
+1062027600:
+  title: Development release v0.9.5!
+  author: Henrik
+  content: |+
+    Version 0.9.5 of fluxbox is out with new features like improved iconbar, search path for theme pixmaps, configurable toolbar height, more theme items.
+    Check it out <a href="version-0.9.php">here</a>
+    <b>UPDATE</b>: Because v0.9.5 had a few serious bugs v0.9.6 has been released.
+
+
+1061476200:
+  title: "#fluxbox stats"
+  author: aleczapka
+  content: |+
+    We have "some stats":http://202.154.112.205/~fluxbot/ from our irc chanel. 
+    Check them outa "here":http://202.154.112.205/~fluxbot/ and quess who was 
+    the loudest? :)
+
+    Thx ak|ra for the providing the statistics.
+
+1061430300:
+  title: Doing Fluxbox themes made easy
+  author: aleczapka
+  content: |+
+    <a href="/download/themeitems.txt">Here you can find</a> a full list of theme items (cvs version of fluxbox). Note: some items might change name or be removed.
+
+1061081100:
+  title: Put some useful info onto your slit
+  author: aleczapka
+  content: |+
+    I have a desktop machine (eternium) where I do some desktop stuff and a
+    server (genesis) where I do my usual server stuff...
+
+    The server has 2x350Mhz processors and this is kinda slow.. most of the
+    time I wait for compilcated, huge, bloated mysql queries to finish...
+
+    To solve it I have to come out with some faster/better alternatives of the
+    queries/php code, so I need to know what is the resources usage on my
+    server.
+
+    I used to ran top (to check the processor/system usage) in some terminal
+    window connected to the server but this wouldn't be so cool like having
+    such informations on fluxbox slit, right? ;)
+
+    "Read quick HOWTO here":http://forums.gentoo.org/viewtopic.php?t=75660
+    See "screenshot here":/gf/gkrellmd.jpgscreenshot.
+
+1061003400:
+  title: Slit pager for Fluxbox
+  author: aleczapka
+  content: |+
+    "Steve Cooper":mailto:stevencooper&#64;isomedia.com wrote 
+    "Fluxter":http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
+    which is "a workspace pager dockapp, particularly useful with the Fluxbox
+    window manager". Besides being just a pager, Fluxter allows per-workspace
+    wallpaper changing, "looks":http://fluxbox.org/zoom.php?shots/aleczapka_fluxbox4.jpg
+    even cooler then bbpager and has other nice features. "Check it
+    out":http://benedict.isomedia.com/homes/stevencooper/projects/fluxter.html
+
+
+1060792140:
+  title: You favourite window manager is counting on you!
+  author: aleczapka
+  content: |+
+    <a href="mailto:klausman&#64;schwarzvogel.de">Tobias Klausmann</a> wrote a letter on our mailing-list today:<br>
+    <i>"As some of you know, I'm the documentation maintainer of Fluxbox. This
+    includes the DocBook XML (or SGML) found on the official site in its
+    English version and a teeny bit of authorship on the man page.
+    <br><br>
+
+    Unfortunately, my day job has been silently taking larger and larger
+    chunks of my time. This has reached the point where I'm unable to deal
+    with the documentation in an appropriate way. For the last few weeks I
+    tried to get coordination of the international docs, the new docs for
+    the 0.9.x (and 1.x) series and a new facility for an online FAQ at least
+    marginally done, but failed at doing so.
+    <br><br>
+
+    While I really enjoyed working with the whole fluxbox team, both the
+    devel guys and the regulars of #fluxbox on Freenode, I feel that it's
+    better if I hand off the doc-hat to someone else. If any of the people
+    here are willing to step in, <a href="mailto:klausman&#64;schwarzvogel.de">mail me</a> or <a href="mailto:fluxgen&#64;users.sourceforge.net">Henrik (fluxgen)</a> off-list and we'll see how I can get you up to speed.
+    <br><br>
+
+    I will stay with you (you don't get rid of me, apologies ;)) on IRC and
+    here on the mailinglists and I will donate bits and pieces of time.
+    <br><br>
+
+    Keep on rockin',<br>
+    Tobias"</i>
+    <br><br>
+    Thanks Tobias for the great work he done on fluxbox documentation!
+
+1059694620:
+  title: New theme for Fluxbox dev release
+  author: aleczapka
+  content: |+
+    I finally finished working on the <a href="/zoom.php?shots-dev/aleczapka_fluxbox2.jpg">FIRST</a> theme (previously known as TWO). It shows some new features of next generation of Fluxbox. You guys were pretty exited about it (me as well :). Download <a href="/download/themes-dev/FIRST">here</a> and have fun.
+
+1059535440:
+  title: Creating colorflavours of fluxboxstyles
+  author: aleczapka
+  content: |+
+    <a href="mailto:gumz&#64;cs.uni-magdeburg.de">Mathias Gumz</a> has wrote a small and handy tool to create different colored flavours of a fluxbox-styles. With <a href="/download/fbcolor">fbcolor</a> you could create several variations of style in just a few minutes. Read <a href="http://141.44.198.27/~gumz/fluxbox/fbcolor/example.html">example of usage</a> and <A href="/download/fbcolor">get it here</a>.
+
+
+1059274920:
+  title: The ultimate solution to artwiz fonts!
+  author: aleczapka
+  content: |+
+    I love artwiz fonts, and I was really disapointed I couldn't use them with gtk2/kde3 apps anymore.
+    What did I do? Fixed them! :) Here you have <a href="/artwiz-aleczapka/artwiz-aleczapka.jpg">screenshot</a> running gnome-font-selector, Nautilus, MozillaFirebird and kcontrol with artwiz fonts displayed properly.<br>
+    Read <a href="/artwiz-aleczapka/README">how to install</a> and <a href="/artwiz-aleczapka/artwiz-aleczapka.tar.bz2">get fixed artwiz fonts here</a>. Of cause they still work with Fluxbox (even when you have antialiasing on).
+
+1059106260:
+  title: FluxGril!
+  author: aleczapka
+  content: |+
+    Oh yes my dear geeks! Googling around for "some sites with Fluxbox
+    styles":/links.php I found "girl.geek":http://geekgirl.bz site with really
+    nice "Fluxbox themes":http://geekgirl.bz/index.php?page=fluxbox. Check it out.
+
+1058758440:
+  title: New toy for ya folks!
+  author: aleczapka
+  content: |+
+    <a href="mailto:han&#64;mijncomputer.nl">Han Boetes</a> is the author of <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/fluxbox/fluxbox/util/fbsetbg"><b>fbsetbg</b></a> which is nice new tool.
+    It is to be a replacement for bgsetbg script (for setting the wallpaper in Fluxbox).
+    <a href="http://www.xs4all.nl/~hanb/software/fluxbox/fbsetbg.html">Read more here</a> and download <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/fluxbox/fluxbox/util/fbsetbg">here</a>.
+
+1057856400:
+  title: Development release v0.9.4
+  author: Henrik
+  content: |+
+    Version 0.9.4 of fluxbox is out with new features like keyboard navigation
+    in menus, rounded corners, _NET_WM_STRUT support and bug fixes.  Check it
+    out "here":version-0.9.php
+
+
+1057276980:
+  title: New Mailing list
+  author: Simon
+  content: |+
+    Henrik has just created a new mailing-list -
+    "fluxbox-announce":http://lists.sourceforge.net/lists/listinfo/fluxbox-announce.
+    This is a moderated, low volume list for important announcements relating
+    to Fluxbox (like new releases). Note that the announcements will still go
+    to the "-users":http://lists.sourceforge.net/lists/listinfo/fluxbox-users
+    and "-devel":http://lists.sourceforge.net/lists/listinfo/fluxbox-devel lists.
+
+1055286240:
+  title: SuSe Packages
+  author: aleczapka
+  content: |+
+    <a href="mailto:cl.david&#64;skynet.be">David Cluytens</a> sends info about <a href="http://linuxsupport.dyndns.org/modules.php?op=modload&name=Sections&file=index&req=viewarticle&artid=2&page=1">SuSe 8.2 packages</a> available with Fluxbox v0.14. Thx David for rolling them out. <b>U: 2003-06-12</b>: packages with v0.9.3 are also available.
+
+1055257200:
+  title: Development release v0.9.3
+  author: Henrik
+  content: |+
+    Version 0.9.3 of fluxbox is out with new features like xinerama support, randr support, transparent slit and bug fixes.
+    Check it out <a href="version-0.9.php">here</a>
+
+
+1052990820:
+  title: NetBSD Packages have arrived!
+  author: aleczapka
+  content: |+
+    <a href="mailto:salo&#64;Xtrmntr.org">Lubomir Sedlacik</a> sends info about FluxBox <a href="ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/wm/fluxbox/README.html">NetBSD packages (binaries & pkgsrc)</a> available for download. The NetBSD port maintainer is <a href="mailto:jmcneill&#64;netbsd.org">Jared McNeill</a>. Thx Lubomir for the info and Jared for rolling them out.
+
+1052428080:
+  title: Development release v0.9.2
+  author: Henrik
+  content: |+
+    Version 0.9.2 of fluxbox is out with new features like pixmap theme support, directional focus movement, remember window hints and transparent menus.<br>
+    Check it out <a href="version-0.9.php">here</a>
+
+
+1051515360:
+  title: Fluxbox on xwinman.org
+  author: aleczapka
+  content: |+
+    Besides of Fluxbox now having its own sub page at
+    "xwinman.org":http://xwinman.org/, it is also possible to "vote for
+    Fluxbox":http://xwinman.org/vote.html in the Xwinman's window manager vote
+    (very short registration required).
+
+    Don't wait any longer and "vote for Fluxbox now":http://xwinman.org/vote.html!
+
+1050537720:
+  title: Development release
+  author: Henrik
+  content: |+
+    Version 0.9.1 of fluxbox is out with new features like embedded tabs, MRU (most recently used) window cycling and toolbar modes.<br>
+    Check it out <a href="version-0.9.php">here</a>
+
+1048308900:
+  title: Road map available
+  author: Simon
+  content: |+
+    Ever wondered when the next release is planned? Or what will be in it?
+    Well, we've created a Road map that the developers will be aiming to
+    follow. You can find it in CVS, or even "here":roadmap.php
+    (updated daily).
+
+1048146660:
+  title: Fluxbox got into Slackware 9.0
+  author: aleczapka
+  content: |+
+    Good news for all Slackware and Fluxbox fans! As Slackware's Changelog says:<br>
+    <pre>extra/fluxbox-0.1.14/fluxbox-0.1.14-i386-1.tgz: Added fluxbox-0.1.14.
+           (by popular demand :-)</pre>
+    Yeah!
+
+1046707200:
+  title: Window Manager of the Year
+  author: Henrik
+  content: |+
+    FluxBox is Window Manager of the Year in the 2002 <a href="http://www.linuxquestions.org/questions/showthread.php?threadid=39874">LinuxQuestions.org</a> Members Choice Awards!
+
+1046252640:
+  title: New Tool For FluxBox
+  author: aleczapka
+  content: |+
+    <a href="http://www.isomedia.com/homes/stevencooper/projects/fluxspace.html">Fluxspace</a> (by <a href="mailto:stevencooper&#64;isomedia.com">Steve Cooper</a>) is a tool which not only sets the background image, but can work with <a href="http://rox.sourceforge.net/">Rox</a> or <a href="http://linuxhelp.hn.org/idesk.php">idesk</a> for per-workspace panels or desktop icons, and can start and stop slit or desktop applets in each workspace or globally.
+    It works well as a rootCommand for FluxBox.<br>
+    <a href="http://www.isomedia.com/homes/stevencooper/images/screenshots/workspace1-big.png">See screenshot</a> and <a href="http://www.isomedia.com/homes/stevencooper/projects/fluxspace.html">get Fluxspace here</a>.
+
+1046025000:
+  title: Development release
+  author: Henrik
+  content: |+
+    Check it out "here":version-0.9.php
+
+
+1045640580:
+  title: New Slackware package maintainer
+  author: aleczapka
+  content: |+
+    Since <a href="mailto:demerol@users.sourceforge.net">demerol</a> is no longer maintaining Slackware packages, we were looking for somebody who could replace him.<br>
+    New <a href="http://fluxbox.bottino.com">Slackware package</a> maintainer is <a href="mailto:greyhame@bottino.com">greyhame</a> from now on.<br>
+    Thanks demerol for his help on FluxBox and welcome grayhame to the FluxBox team.
+
+
+1044606240:
+  title: Sparc Packages available
+  author: aleczapka
+  content: |+
+    <a href="me@nivenhuh.net">NivenHuH</a> has prepared <a href="http://unixsmarts.com/fluxbox/">Sparc-Solaris package for you to download</a>. He is now Fluxbox Sparc package maintainer. Thanks NivenHuH for contributing.<br>
+    If you see no binaries for your fav distro/platform - make your own, test it, put it on the web and send info <a href="mailto:aleczapka@users.sourceforge.net">here</a>.
+
+
+1044531600:
+  title: Background Buddy
+  author: aleczapka
+  content: |+
+    <img src="images/bbb.gif" title="Background Buddy" align=right hspace=4><a href="http://www.fewt.com/bgbuddy.shtml">Background Buddy</a> is an automatic wallpaper rotating daemon. Among other WM it also supports FluxBox, so check it out.<br>
+    Thx <a href="mailto:awyatt@fewt.com">Andrew Wyatt</a> for the info.
+
+
+1042818000:
+  title: Want icons on your desktop?
+  author: Henrik
+  content: |+
+    Check out <a href="http://fluxbox.sf.net/fbdesk/">FbDesk</a>
+
+
+1041625800:
+  title: Fluxbox nominated for "Window Manager of the Year"
+  author: Henrik
+  content: |+
+    <a href="http://www.linuxquestions.org/questions/forumdisplay.php?s=&forumid=21">
+    LinuxQUestions.org</a>
+
+
+1041335460:
+  title: Refresh Your Desktop
+  author: aleczapka
+  content: |+
+    Wanna get some new styles? Check the FluxBox section at <a href="http://www.themedepot.org/showarea.php4?area=23">Themes Depot</a>.
+
+1040379360:
+  title: Quo Vadis Fluxbox?
+  author: aleczapka
+  content: |+
+    Ever wondered where is Fluxbox development going to? Good, cause Henrik just posted a message on our mailing list, about Fluxbox bright future.
+    <br><br>
+
+    <b>Fluxbox Next Generation Features:</b>
+    <ul>
+    <li>Layer support ("always on top") [high priority]
+    <br><br>
+
+    <li>Action system [high priority]<br>
+        You will be able to specify actions for things like button click
+        (thus overriding default actions)
+    <br><br>
+
+    <li>Transparent windows [low priority]<br>
+        Configurable both compile time and runtime.
+    <br><br>
+
+    <li>RANDR support [low priority]<br>
+        <a href="http://www.xfree86.org/~keithp/talks/randr/randr/">The X Resize and Rotate Extension</a>
+    <br><br>
+
+    <li>Tabs embedded in title bar. [high priority]<br>
+        Instead of having them outside the window they will be inside the
+        title bar, thus giving you even more desktop space.
+    </ul>
+
+    Except for these basic features there'll be some new unique features and
+    surprises.<br>
+
+    Due to these major changes in the code there will be a "beta" release
+    around the end of January and beginning of February, in which you can
+    bug test and evaluate it.
+    The release is sheduled at the end of February or beginning of March.
+    <br><br>
+
+    During this time, there might also be a bug fix release/patch for 0.1.14.
+
+
+1040367420:
+  title: Fluxbox on Darwin
+  author: aleczapka
+  content: |+
+    Jason (jason at zero-networks dot net) sent info and <a href="/zoom.php?shots/purevol_fluxbox.jpg">screenshots</a> about Fluxbox running on iBook. <i>(Darwin dough 6.2 Darwin Kernel Version 6.2: Tue Nov  5 22:00:03 PST 2002; root:xnu/xnu-344.12.2.obj~1/RELEASE_PPC  Power Macintosh powerpc)</i>. Looks kewl, doesn't it?
+
+1040274540:
+  title: Remember the patch?
+  author: aleczapka
+  content: |+
+    Xavier Brouckaert (xbr at info.ucl.ac.be) sends in info about his great <a href="http://bugfactory.org/~gav/fluxbox/">remember patch</a> (to remember and restore application settings like position, size, workspace, decorations, tab style). It works now with Fluxbox v0.13 and v0.14. <a href="http://bugfactory.org/~gav/fluxbox/">Get it and read instructions here</a>.
+
+
+1040130540:
+  title: Screenshots updated
+  author: aleczapka
+  content: |+
+    Thanks everyone for sending new & shiny <a href="/screenshots.php">Fluxbox screenshots</a>.
+
+
+1039828020:
+  title: Slackware Packages
+  author: Justin
+  content: |+
+    For those of you who are not on the fluxbox-users mail list, the fluxbox
+    slackware packages are "back online":http://www.demerol.org/.
+    Sorry about all the downtime, and the location will be changing so just go
+    to demerol.org for now and there will always be a way to the package.
+
+
+1039431600:
+  title: Fluxbox 0.1.14 released!
+  author: Henrik
+  content: |+
+    Get it here: <br>
+    <a href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.14.tar.gz">source gz</a>   (md5sum: f097b97127461fa3f6f4af4048c75cfc )<br>
+    <a href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.14.tar.bz2">source bz2</a> (md5sum: 66b72e10fc595e8531547046ad22f5a1 )<br>
+    <b>News in 0.1.14:</b>
+    <ul>
+       <li> Better Xft checking
+       <li> Text for vertical tabs
+    </ul>
+    <b>Bug fixes:</b>
+    <ul>
+       <li> Fixed bug [ 641136 ] OpenOffice 1.0.1 aborts
+       <li> Fixed bug [ 561602 ] Problem using ToggleDecor in terminals
+       <li> Fixed bug [ 642189 ] Wrong AA font on init
+       <li> Fixed tab font on restart
+       <li> Fixed caps-, num- and scrolllock mask in Alt+move/resize
+       <li> Fixed missing interlace
+       <li> Fixed minor NLS bug
+    </ul>
+    See <a href="changelog.php">ChangeLog</a> for details.<br>
+    Notes: 0.1.14 does not reflect current cvs status.<br>
+     Vertical text uses regular XFont (i.e no Xmb nor Xft) but
+     it will change back to antialias when you toggle from vertical to
+     horizontal text if you have antialias on. (But it will not
+     change back to Xmb).
+    <br>
+    Enjoy.
+
+1038775740:
+  title: New Screenshots
+  author: Justin
+  content: |+
+    I just finished uploading some new "screenshots":screenshots.php. Thanks
+    to those of you on the mail list and in #fluxbox who contributed.
+
+1038677400:
+  title: 0.1.13 bugfix1 patch.
+  author: Henrik
+  content: |+
+    Get it <a href="download/patches/fluxbox-0.1.13-bugfix1.patch">here</a> (md5sum: d7b8b0472381ea9bf40229d0b137a856)
+    <b>fixes:</b>
+    <ul>
+      <li>interlace rendering
+      <li>"OpenOffice"-bug, an uninitialized X atom caused it to crash
+      <li>Antialias on start
+    </ul>
+
+1037710200:
+  title: Fluxbox 0.1.13 released!
+  author: Henrik
+  content: |+
+    Get it <a href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.13.tar.gz">here</a> (md5sum: 1b6eec68ae437f3f7084cc19ed7e1083 )<br>
+    <b>News in 0.1.13:</b>
+    <ul>
+       <li> Antialias support (Xft)
+       <li> UTF-8 support
+       <li> Extended window manager support (i.e Gnome2...)
+        <ul>
+    		atom support:
+            <li> _NET_WM_DESKTOP,
+            <li> _NET_NUMBER_OF_DESKTOPS,
+            <li> _NET_CURRENT_DESKTOP,
+            <li> _NET_ACTIVE_WINDOW,
+            <li> _NET_CLOSE_WINDOW
+            <li> _NET_WM_STATE
+            <li> _NET_WM_STATE_STICKY
+            <li> _NET_WM_STATE_SHADED
+    	 </ul>
+       <li> fbrun command history and horizontal scrolling
+       <li> Default terminal and browser choice in fluxbox-generate_menu
+       <li> Workspace menu popups if you click with first mouse button on workspace label
+    </ul>
+    <b>Bug fixes:</b>
+    <ul>
+       <li> Fixed bug [ 604958 ] Menu not (full) visible when tabs bottom
+       <li> Fixed bug [ 581588 ] Toolbar auto-hiding
+       <li> Fixed bug [ 608945 ] xmms crashes fluxbox
+       <li> Fixed bug [ 522673 ] Numlock not handled correctly in Solaris
+       <li> Fixed bug [ 604634 ] Fluxbox 0.1.11 menu on iconbar problem
+       <li> Fixed bug [ 627897 ] Clicking tab leads to crashing X-Server.
+       <li> Fixed bug [ 609267 ] Sending minimized group
+    </ul>
+    See <a href="changelog.php">ChangeLog</a> for details.
+    Enjoy.
+
+
+1033347240:
+  title: Unofficial 'Remember Patch'
+  author: aleczapka
+  content: |+
+    <a href="/zoom.php?shots/fluxbox/remember_patch.jpg"><img src="/images/shots/fluxbox/remember_patch-.jpg" border=0 align=right vspace=10 hspace=10 title="Remember Patch"></a>
+    Xavier Brouckaert made some time ago a <a href="/download/patches/unofficial-fluxbox-0.1.12-remember-patch.bz2">patch</a> which enabled Fluxbox (v0.1.10) to remember and restore
+    application settings like position, size, workspace, decorations, tab style... and so on.<br>
+    This patch was also available for v0.1.11 and because of <a href="http://lists.sourceforge.net/mailman/listinfo/fluxbox-users">users requst</a>,
+    it is now available also for the latest v0.1.12 release.<br>
+    This patch adds 2 features:
+    <blockquote>
+        1) Ability to launch applications at fluxbox startup via a submenu called 'Startup' in the menu file. It's useful for those using gdm as login manager (without .xsession).
+        <br><br>
+
+        2) Remembering of workspace, dimensions, position and other parameters via a new submenu called 'Remember...' when you right click on the titlebar of a window. Window settings are saved in a new file "~/.fluxbox/apps".
+    </blockquote>
+    Read the instruction and grab it on the <a href="/download.php#patches">download page</a>.
+    <br>
+    <b>NOTICE:</b> Do not disable tabs in Fluxbox configuration, cause you will get lots of crushes when you try to move tabs around.
+    You can still disable tabs for given applications and do not notice crushes when you have tabs enabled in Fluxbox.
+
+
+1031856660:
+  title: Fluxbox 0.1.12 released!
+  author: Henrik
+  content: |+
+    Get it  <a
+    href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.12.tar.gz">here</a><br>
+    <b>Bugfixes in 0.1.12:</b>
+    <ul>
+      <li> mozilla focus issue
+      <li> Gnome state check (fspanel now sticky)
+      <li> Deiconify before send to workspace
+      <li> Fixed save workspace names when add/remove workspace
+      <li> New transient handling which should prevent deadlock
+      <li> Fixed sticky window crash
+      <li> Fixed workspace name update from toolbar
+    </ul>
+    Enjoy.
+
+
+
+1031656800:
+  title: 0.1.11 bugfix 2 patch
+  author: Henrik
+  content: |+
+    Get it <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.11-bugfix2.patch">here</a>.<br>
+    This includes the first patch and fixes a deadlock that was introduced in the first patch. <br>
+    There'll probably be a new release in a day or two due to the circumstances, so stay tuned.<br>
+    Sorry for the inconveniens.
+
+
+1031622000:
+  title: 0.1.11 bugfix 1 patch
+  author: Henrik
+  content: |+
+    Get it <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.11-bugfix1.patch">here</a>.<br>
+    This patch fixes new transient handling which should fix the xine problem,
+    and it also fixes the next/prev window focus to non-tabbed window.<br>
+    Download <a
+    href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.11.tar.gz">fluxbox-0.1.11.tar.gz</a> and
+    <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.11-bugfix1.patch">fluxbox-0.1.11-bugfix1.patch</a><br>
+    tar zxvf fluxbox-0.1.11.tar.gz<br>
+    patch -p0 < fluxbox-0.1.11-bugfix1.patch<br>
+    and then go to fluxbox-0.1.11 directory and configure/compile as usual.
+
+
+1031347320:
+  title: fluxbox.org
+  author: Henrik
+  content: |+
+    Many thanks to Krzysztof Bednarek for buying fluxbox.org domain name.
+
+1031061000:
+  title: Fluxbox 0.1.11 Released
+  author: Henrik
+  content: |+
+    Get it  <a
+    href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.11.tar.gz">here</a><br>
+    <b>News in 0.1.11:</b>
+    <ul>
+      <li>Autogrouping:<br>
+          This will read groups from a file and auto group programs when they start.<br>
+      <li>Autogrouping-from-tab:<br>
+          This will allow you to popup the root menu, if you right click on the tab,
+    	  and select an application and it'll start grouped to the tab.
+          (note: this might interfere with the normal autogrouping in a bad way) <br>
+      <li>Two new themes: BlueNight and LemonSpace<br>
+      <li>Carry window across workspace with outlined mode.<br>
+      <li>Slit now has a theme option:<br>
+        <blockquote>
+          slit: [texture option]<br>
+          slit.color: [color value]<br>
+          slit.colorTo: [color value]<br>
+          It will fall back to the toolbar theme if it doesn't find it.<br>
+    	</blockquote>
+       <li>ja_JP and fr_FR in fluxbox-generate_menu<br>
+       <li>New util: fbrun<br>
+          Which allows you to type a command and run it.<br>
+       <li>The window menu now pop up in iconbar when you right click on the icon.<br>
+    </ul>
+    <b>Bug fixes:</b><br>
+    <ul>
+       <li>Fixed bug [ 582574 ] borderless windows cant be horiz resized.
+       <li>Fixed bug [ 600811 ] undefined keys messes up
+       <li>Fixed bug [ 598490 ] misplaced parentrelative gives redrw prb
+       <li>Fixed bug [ 586830 ] the clock now updates once per second.
+       <li>Fixed bug [ 574717 ] restarting fluxbox should keep iconic.
+       <li>Fixed "send to..." bug
+       <li>Fixed slitlist bug
+       <li>Fixed workspace name and the reassociation bug
+    </ul>
+    (The transient bug might be fixed but needs more testing, so if you filled a bugreport about transient window, please verify this)<br>
+    Enjoy.
+
+1030811460:
+  title: Artwiz Fonts and locale settings - the solution
+  author: aleczapka
+  content: |+
+    I think all of you know very well done fonts made by artwiz. Especially they look great with Fluxbox, the only problem was when somebody wanted to use some different encoding (locale settings) then C or POSIX they didn't show up.<br>
+    We had some way to fix it but it was just a 'patch'. Sometime ago I was able to solve this problem pernamently and in a proper way.
+    You can read more on updated <a href="/docs/en/artwiz-fonts.php#localefix">Artwiz-fonts HOWTO</a>.<br>
+    Note: This will help you to fix this issue not just with Fluxbox but with other applications as well (eg. evolution and UTF-8).
+
+1030800060:
+  title: Documentation Update
+  author: aleczapka
+  content: |+
+    We have now <a href="/docs.pl.php">Polish translation</a> of Fluxbox docs, thx to <a href="mailto:majes@boxofimagination.com">Majes</a>.<br>
+    And also there is something for Developers - <a href="/docs/devbox/"><b>DevBox</b></a> - Fluxbox Devel Documentation.
+    Check it out.
+
+1026613800:
+  title: Fluxbox 0.1.10 Released
+  author: Henrik
+  content: |+
+    Get it <a
+    href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.10.tar.gz">here</a><br>
+    <b>News in 0.1.10:</b>
+    <ul>
+    <li>slit order, you can now order your apps in the slit,
+         see documentation for more details<br>
+    <li>xsri target in bsetbg<br>
+    <li>language support in fluxbox-generate_menu: sv_SE, nl_NL, fi_FI, ru_RU<br>
+    </ul>
+    <b>Bug fixes:</b><br>
+    <ul>
+     <li> [ 562882 ] "bbpager in slit doesn't work correctly".
+     <li> [ 562713 ] "incorrect listings in workspace menu".
+     <li> [ 554646 ] "Dialog boxes have tabs briefly"
+     <li> [ 566277 ] "xine fullscreen causes hard X lockup"
+     <li> [ 554218 ] "windows have wrong resizeableness"
+    </ul>
+    Enjoy.
+
+1023322260:
+  title: Fluxbox Themes again
+  author: aleczapka
+  content: |+
+    We decided to move <a href="/themes.php">themes</a> section - there is no need to double the location of the themes,
+    and it will speed things up.<br>
+    <b>Please submit all your beautiful themes at <a href="http://themes.freshmeat.net/browse/962/">Freshmeat.net</a> from now on.</b>
+    The themes which have been submitted already will stay here, but we don't accept new submissions anymore.
+
+
+1023129000:
+  title: 0.1.9 bugfix 2 patch
+  author: Henrik
+  content: |+
+    Get it <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.9-bugfix2.patch">here</a>.<br>
+    Don't forget to apply <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.9-bugfix1.patch">bugfix 1</a> too.<br>
+    (Note: bugfix1 just fixes NLS)<br>
+    This patch fixes:<br>
+    <ul>
+        <li>bug [ 562882 ] "bbpager in slit doesn't work correctly". (a slit client bug)<br>
+        <li>bug [ 562713 ] "incorrect listings in workspace menu".<br>
+        <li>bug [ 554646 ] "Dialog boxes have tabs briefly".<br>
+    	  Windows that are not maximizable by default, such as
+          dialogs, wont get a tab by default.
+    </ul>
+
+
+1022546580:
+  title: Fluxbox Themes
+  author: aleczapka
+  content: |+
+    Good news Everyone! 
+    You can find themes for Fluxbox on
+    "Freshmeat.net":http://themes.freshmeat.net/browse/962/?topic_id=962, and
+    also some "new themes here":/themes.php.
+
+    We must ask SF for more disk space, then I will be able to upload pending
+    screenshots and some new themes.  Till then plz submit Fluxbox Themes on
+    "Freshmeat.net":http://themes.freshmeat.net/browse/962/?topic_id=962.
+
+1022272200:
+  title: Fluxbox 0.1.9 Released
+  author: Henrik
+  content: |+
+    Get it <a
+    href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.9.tar.gz">here</a><br>
+    <b>News for 0.1.9:</b>
+    <ul>
+    <li>Improved fluxbox-generate_menu script.
+     Which now installs itself so you can <br>
+     regenerate the menu any time,and with gnome and kde menus<br>
+     run: fluxbox-generate_menu -h<br>
+     for more information.<br>
+
+    <li>Default 24 hour clock format<br>
+    <li>Code cleaning<br>
+    <li>Compiles with no errors on Mac OS X
+    <li>Now compiles with Intel Compiler 6.0 and GCC 3.1
+    <li>New keybindings:
+    	<blockquote>
+        	<li><b>FirstTab</b><br>
+    	    Go to first tab
+    		<br><br>
+
+    		<li><b>LastTab</b><br>
+    		Go to last tab
+    		<br><br>
+
+    		<li><b>MoveTabPrev</b><br>
+    		Move current tab left
+    		<br><br>
+
+    		<li><b>MoveTabNext</b><br>
+    		Move current tab right
+    	</blockquote>
+    <li>"Allow Desktop MouseWheel Switching" runtime option
+    <li>Configurable geometry show
+        configure in init with: session.screen0.showwindowposition<br>
+    <li>Now saves resources when you change them in the menu and not when you
+        exit Fluxbox. So you can edit the init file and the reconfigure/restart <br>
+        Fluxbox to activate changes.<br>
+    </ul>
+    <b>Bugfixes: </b><br>
+    <ul>
+    	<li>bug [ 552723 ] removing decorations while shaded.
+    	<li>shade bug while vertical rotated tabs and tabs off
+     	<li>bug [ 515483 ] "XMMS Problem"
+    	<li>Fixed transient bug which cause Fluxbox to crach ( the "acroread" bug )
+    </ul>
+    Enjoy.
+    <br><br>
+
+    <i>U: 16:45 by aleczapka</i>: If you want to enable NLS support use <a href="/download/patches/fluxbox-0.1.9-bugfix1.patch">this patch</a>.
+
+
+
+1021388940:
+  title: 7th place
+  author: aleczapka
+  content: |+
+    Freshmeat says: "Fluxbox on 7th place":http://freshmeat.net/stats/#rating by rating.
+
+    Thx all for voting.
+
+1021276200:
+  title: Fluxbox on Cygwin-XFree
+  author: aleczapka
+  content: |+
+    "Daffy":mailto:daffy@oav.net, sends in a screenshot showing Fluxbox
+    running under Winblowz (tm) - "check it out here":http://daffy.kazar.org.
+
+
+1020421620:
+  title: 0.1.8 bugfix 2 patch
+  author: Henrik
+  content: |+
+    Get it <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.8-bugfix2.patch">here</a>.<br>
+    Don't forget to apply <a href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.8-bugfix1.patch">bugfix 1</a> too.<br>
+    Or use the combined patch bugfix 1 and 2 <a
+    href="http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.8-bugfix-1-2.patch">here</a>.
+    <br><br>
+    This patch fixes:<br>
+    <ul>
+        <li>Fixed bug [ 515483 ] "XMMS Problem", in Window.cc,<br>
+           decorations.handle and decorations.border now = true on transient windows<br>
+        <li>Fixed shade bug while vertical rotated tabs and tabs off (Thanks signal9)<br>
+        <li>Fluxbox now saves settings when you change them and not when you quit<br>
+    </ul>
+
+
+1020126600:
+  title: "Development Continues: Patch of the Evening"
+  author: aleczapka
+  content: |+
+    For quite a while, there is a lot going on at our <a href="http://www.geocrawler.com/lists/3/SourceForge/18605/0/">fluxbox-devel</a> mailing list.<br>
+    In a secret can tell ya, ppl are submitting patches like crazy... damn, how sweet :><br>
+    Some of them, got into v0.1.8 already, some are in current CVS, and some didn't make it yet.
+    You'd better take a look for yourself, cause you could loose a good chance to try some new,
+    really kewl features, like (some of my fav):
+    <ul>
+    	<li><a href="http://www.geocrawler.com/lists/3/SourceForge/18605/0/8531463/">move tabs, etc</a><br>
+    	<i>"Ok, after a suggestion from Rando, I renamed the functions in my
+    	patch to be a little more generic and not so horizontal-tabs
+    	specific (MoveTabPrev, MoveTabNext instead of MoveTabRight and
+    	MoveTabLeft). For those that don't remember, these two binds
+    	allow you to swap the focused tab with either the previous or next
+    	tab in the list, allowing you to move the tabs around in the list
+    	without touching the mouse."</i>
+    	<br>
+    	Author: Phil Dier | phil at gettcomm.com
+    	<br><br>
+
+    	<li><a href="http://www.geocrawler.com/lists/3/SourceForge/18605/0/8524524/">operate menus with keyboard</a><br>
+    	<i>
+    	"RootMenu' key binding is very useful, but I want to do all menu
+    	operation with keyboard. I have a try to implement this feature.
+    	With the patch at the end, you can use following bindings in your keys file (...)"
+    	</i>
+    	<br>
+    	Author: kita at kitaj.no-ip.com
+    	<br><br>
+
+    	<li><a href="http://www.geocrawler.com/lists/3/SourceForge/18605/0/8515478/">Sorted slit dockapps</a><br>
+    	<i>
+    	"This patch addresses the unpredictability of slit dockapp ordering.
+    	It stores the current order of dockapps in a file,
+    	default=~/.fluxbox/slitlist.  When loading dockapps into the slit it
+    	attempts to maintain the previous ordering, matching with
+    	previously-run dockapps by name."
+    	</i>
+    	<br>
+    	Author: Steve Cooper | stevencooper at isomedia.com
+    </ul>
+
+    To apply the patch, use:
+    <pre>
+    	# cd fluxbox-sources
+    	# patch -p0 < nameofthepatch.patch
+    </pre>
+    You can try different -p options like (-p1 or -p2) if something won't work.<br><br>
+    And there is more good stuff on <a href="http://lists.sourceforge.net/lists/listinfo/fluxbox-devel">Fluxbox-devel</a> mailing list,
+    take a look into <a href="http://www.geocrawler.com/redir-sf.php3?list=fluxbox-devel">archive</a>.<br>
+    If you want to subscribe, do it <a href="http://lists.sourceforge.net/lists/listinfo/fluxbox-devel">here</a>.
+
+
+1020111780:
+  title: Fluxbox Review at Monolinux
+  author: aleczapka
+  content: |+
+    Eric Krout writes: <i>(...) Chances are that you've probably heard of several other projects of this type that facilitate the manipulation of user programs and files, and they're probably window managers, which are much lighter and not as full-featured as desktop environments such as the aforementioned KDE and GNOME. However, I'm willing to wager that less than five percent of you reading this article have ever heard of the slick, rapidly-developed Fluxbox window manager...</i><br>
+    <a href="http://qhcf.net/~eric/modules/news/article.php?storyid=118">Must read...</a>.
+
+1020002400:
+  title: Documentation updated
+  author: Henrik
+  content: |+
+    Check it out "here":http://fluxbox.sourceforge.net/docs.php
+    *U: 20:38 by aleczapka:* 
+    "Themes":/themes.php and "screenshots":/screenshots.php were also updated.
+
+1019848740:
+  title: 0.1.8 Bugfix 1 patch
+  author: Henrik
+  content: |+
+    Download it "here":http://fluxbox.sourceforge.net/download/patches/fluxbox-0.1.8-bugfix1.patch
+    This patch fixes some minor bugs in:
+    Menu theme, workspace warping and multibyte in fonts
+
+
+1019252100:
+  title: Fluxbox 0.1.8 Released
+  author: aleczapka
+  content: |+
+    News in Fluxbox 0.1.8:
+    <ul>
+    <li>Code clean up<br>
+    <li>NLS-fixes<br>
+    <li>Better window cycling with optional parameters.<br>
+      NextWindow and PrevWindow now takes an integer parameter.<br>
+      Parameter values:
+    	<blockquote>
+         0 or unspecified = Default/current behavior - no skipping<br>
+         1 = Skip: lower tabs<br>
+         2 = Skip: stuck windows<br>
+         3 = Skip: lower tabs/stuck windows<br>
+         4 = Skip: shaded windows<br>
+         5 = Skip: lower tabs/shaded windows<br>
+         6 = Skip: stuck windows/shaded windows<br>
+         7 = Skip: lower tabs/stuck windows/shaded windows
+    	</blockquote>
+    <li>Xinerama support ( configure option --enable-xinerama )
+    <li>Workspace warping, drag window between workspaces, does only work with opaque moving
+    <li>You can enable tabs in "Tabs off"-mode
+    <li>New key bindings:
+    	<blockquote>
+    		<li><b>ToggleDecor</b><br>
+    		Toggle the decor of a window
+    		<br><br>
+
+    		<li><b>ToggleTab</b><br>
+    	    Toggle the tab
+    		<br><br>
+
+    		<li><b>RootMenu</b><br>
+          	Pop up the root menu
+    	</blockquote>
+    <li>Smarter Next/Prev focus,
+      Makes new windows get inserted after the focused window in the cycling order instead of always at the end.
+    <li>Scrolling on root window changes workspace
+    </ul>
+    <br><br>
+
+    <b>Bug fixes in Fluxbox 0.1.8:</b><br>
+    <ul>
+    	<li>Window dragging + workspace changing ( bug [ 528101 ] )
+    	<li>Minor task bar issue, it will update icon bar-text now ( bug [ 533436 ] )
+    	<li>"decoration.handle" bug, which caused the window to have wrong height with no decorations
+    	<li>Slit-client window bug.
+    </ul>
+    Enjoy.
+
+
+1019167320:
+  title: Site updates and such
+  author: aleczapka
+  content: |+
+    Hey all! Sorry for lacking some updates on da page, but I am kinda busy right now.
+    Anyways, I have fixed some broken links and updated few sites.<br>
+    I got lots of new screenshots and themes from you - which makes me happy - but plz do not
+    send your submissions twice or more... I really got them at the first time, but was lacking
+    time to check it and upload. Will do next days.
+
+
+1015586820:
+  title: Bugfix
+  author: Henrik
+  content: |+
+    download it "here":/download/patches/fluxbox-0.1.7-bugfix1.patch.
+    Fixes the withdrawn app bug. (Like the one with bbpager)
+
+1015008840:
+  title: Fluxbox 0.1.7 Released!
+  author: aleczapka
+  content: |+
+    Yes, the next <a href="http://sourceforge.net/project/showfiles.php?group_id=35398&release_id=77568">release</a> is finally there!
+    <br><br>
+
+    What's new in 0.1.7:
+    <ul>
+        <li>Title bar configuration is moved to the <code>init</code> file
+        <li>Fluxbox will auto copy the default files to <code>~/.fluxbox/</code>  if they don't exist
+        <li>Partial Gnome support:<br>
+            Atoms supported:
+            <ul type=square>
+                <li>_WIN_WORKSPACE
+                <li>_WIN_WORKSPACE_COUNT
+                <li>_WIN_WORKSPACE_NAMES
+                <li>_WIN_CLIENT_LIST
+                <li>_WIN_STATE :
+                    <ul type=circle>
+                        <li>WIN_STATE_MINIMIZED
+                        <li>WIN_STATE_STICKY
+                        <li>WIN_STATE_SHADED
+                    </ul>
+                <li>_WIN_HINT:<br>
+                    WIN_HINTS_SKIP_FOCUS
+            </ul>
+        <br>
+
+        <li>Tree new languages
+            <ul type=square>
+                <li>Portuguese
+                <li>Bulgarian
+                <li>Japanese
+            </ul>
+        <br>
+
+        <li>New key bindings and with parameter support
+            <ul type=square>
+                <li>NudgeRight <step>
+                <li>NudgeLeft <step>
+                <li>NudgeUp <step>
+                <li>NudgeDown <step>
+                <li>PrevWorkspace <step>
+                <li>NextWorkspace <step>
+                <li>Workspace <workspacenum><br>
+                    <i>We keep the Workspace1 Workspace2 etc
+                    but they will be removed in next release</i>
+                <li><b>new:</b> - LeftWorkspace<br>
+                    <i>This will change to the workspace to the left (no workspace cycling)</i>
+                <li><b>new:</b> - RightWorkspace<br>
+                    <i>This will change to the workspace to the right (no workspace cycling)</i>
+                <li><b>new:</b> - SendToWorkspace <workspacenum><br>
+                    <i>Sends current window to a workspace</i>
+            </ul>
+        <br>
+
+        <li>Huge code clean up
+    </ul>
+
+    Bugfixes in 0.1.7:
+    <ul>
+        <li>BadWindow error in ~FluxboxWindow
+        <li>negative width in a window
+        <li>Fixed lower/raise of windows when using windowmenu/keybinding so now tabs should follow
+        <li>Slit always on top crash
+    </ul>
+
+    Don't wait any longer and <a href="http://sourceforge.net/project/showfiles.php?group_id=35398&release_id=77568">get it here</a>.
+
+1014623280:
+  title: Documentation updated
+  author: aleczapka
+  content: |+
+    New stuff in Fluxbox <a href="/docs.php">DOCS</a>, thx to <a href="digiwano&#64;babblica.net">Rando Christensen (Digiwano)</a>,
+    we have now <a href="/docs.php">"Consolidated new fluxbox documentation"</a> section.<br>
+    It contains info such as the <a href='/docs/newdoc.starting.php#top'>Getting Started</a> guide (which contains the 'installing for newbies' and 'firstrun' documents), the <a href='/docs/newdoc.tabbing.php#top'>Ultimate Guide to fluxbox Tabs</a>,
+    the new <a href='/docs/newdoc.keybindings.php#top'>Keybindings / Keygrabber</a> reference, and the <a href='/docs/newdoc.backgrounds.php#top'>Setting Backgrounds</a> guide.<br>
+    Must read!
+
+
+1014374880:
+  title: Artwiz-Fonts HOWTO updated
+  author: aleczapka
+  content: |+
+    Finally, I found a solution to the "artwiz fonts and your locale settings" issue.<br>
+    Read all <a href="/docs/en/artwiz-fonts.php#bugs">here</a>.
+
+1014270360:
+  title: Sleep no more! Bring Order 2 Chaos
+  author: aleczapka
+  content: |+
+    Got tired of dockapps poping up in random order on your slit?
+
+    Got tired of playing with sleep (<code>man 1 sleep</code>) for too long,
+    with miserable success?
+
+    Aren't you just pissed off?!
+
+    You are? Okie.. relax now, cause I have a *remedy* for you:
+
+    "xtoolwait":http://www.hacom.nl/~richard/software/xtoolwait-1.3.README is
+    the name of that wonderful tool, "download and bring order to chaos now!":http://www.hacom.nl/~richard/software/xtoolwait.html
+
+    Don't forget to
+    "RTFM":http://www.hacom.nl/~richard/software/xtoolwait-1.3.README first.
+
+
+1014076320:
+  title: New features in CVS
+  author: aleczapka
+  content: |+
+    Finally, our CVS version has stabilized again, it compiles, the annoying bug with the icons has been fixed and support for GNOME hints (still in development) has finally arrived!<br>
+    Maybe there is not much use of GNOME hints by now, but one feature you gonna love for sure
+    - xmms will start now sticky if you say so.
+    Just select in the <b>xmms menu:</b> <code>Options->Sticky</code> (or press Ctrl+S when xmms window is focused) and it will be remembered - next time you start xmms it will stick over your all desktops.<br>
+    You need to use <code>--enable-gnome</code> option during configure.<br>
+    Read on <a href="/download.php">download page</a>, how to get the CVS version.
+
+1013977680:
+  title: Trouble with Fonts?
+  author: aleczapka
+  content: |+
+    Many people were asking on our mailing-list, how to install Artwiz Fonts. Now you don't have to ask anymore, because <A HREF="mailto:han&#64;mijncomputer.nl">Han</a> has prepared nice <a href="/docs/en/artwiz-fonts.php">HOWTO</a> which will help you to deal with the problem.<br>
+    So if you have problems with fonts, <a href="/docs/en/artwiz-fonts.php">read it now</a>.
+
+
+1013827920:
+  title: Fluxconf v0.6 went gold
+  author: aleczapka
+  content: |+
+    <a href="mailto:fab&#64;gcu.info">fab</a> wrote a nice tool - Fluxconf (Fluxbox Configuration Tool) which will help you set the Fluxbox settings and keybindings.
+    Check out the screenshots and <a href="http://devaux.fabien.free.fr/flux/">get it here</a>.
+    <br><br>
+    <center>
+    <a href="/zoom.php?shots/fluxbox/fluxconf.jpg"><img src="/images/shots/fluxbox/fluxconf-.jpg" border=0 title="Fluxconf"align=middle></a>
+    <a href="/zoom.php?shots/fluxbox/fluxkeys.jpg"><img src="/images/shots/fluxbox/fluxkeys-.jpg" border=0 title="Fluxconf" align=middle></a>
+    </center>
+
+1012999980:
+  title: First Review
+  author: aleczapka
+  content: |+
+    <i> When I heard about Fluxbox , my first reaction was surprise. Having been a user of Blackbox for several years and many versions, I was a bit skeptical about Fluxbox's ability to extend a window manager that in my opinion, was already great. Nevertheless, after reading the list of enhancements to the desktop over Blackbox 0.61, I was excited to give it a try.</i><br>
+    Finally, we got some Press attention :)<br>
+    You can read whole review of Fluxbox on <a href="http://www.newsforge.com/article.pl?sid=02/02/06/0220236&mode=thread">NewsForge.net</a>.
+
+
+1012244700:
+  title: fluxbox-0.1.6-bugfix2.patch
+  author: aleczapka
+  content: |+
+    This <a href="/download/patches/fluxbox-0.1.6-bugfix2.patch">patch</a> will fix the problems with <code><b>~</b></code> in config files.<br>
+    <pre>
+        patch -p0 < fluxbox-0.1.6-bugfix2.patch
+    </pre>
+    All package maintainers please update the packages ASAP.
+
+
+1011441600:
+  title: Got dump?
+  author: aleczapka
+  content: |+
+    Well, if it happened to you and you got core-dump, there is a
+    "HOWTO":/docs/about-debugging.php what to do in such situation,
+    how to prepare informations which will help us to fix it. Help us help you
+    and "read it":/docs/about-debugging.php, before you submit a
+    bug report.
+
+
+1011440640:
+  title: Installing Fluxbox for newbies
+  author: aleczapka
+  content: |+
+    Ircaddict has prepared a short "HOWTO":/docs/fbnewbie.php, about compiling
+    Fluxbox from the sources and installing it properly.  All who are new to
+    the subject should take a look.
+
+1011183360:
+  title: Customizing your menu
+  author: skypher
+  content: |+
+    For those of you who want some more info/help on creating your own menu
+    for fluxbox might find "this":http://users.forthnet.gr/kav/pesid/window/menu.html
+    document helpful. Note that this doc is written for Blackbox but applies
+    to Fluxbox aswell. (Thanks to "Ircaddict" for the tip)
+
+1010892480:
+  title: Bugfix for v0.1.6
+  author: aleczapka
+  content: |+
+    If you've encountered problems with applications like Sylpheed or xmms (however others might be as well),
+    and Fluxbox do that bad thingy which is dumping core, you should apply this bugfix:
+    <a href="/download/patches/fluxbox-0.1.6-bugfix1.patch">bugfix1 patch (v0.1.6)</a>.
+    <pre>
+        patch -p0 < fluxbox-0.1.6-bugfix1.patch
+    </pre>
+    Recompile-Reinstalll-Rule! ;)
+
+1010750400:
+  title: Fluxbox 0.1.6 released!
+  author: aleczapka
+  content: |+
+    "Good news everyone...", new version of your favourite window manager  is out.<br>
+    What's new in release v0.1.6:
+    <ul>
+    <li>Rootcommand is configured for each screen
+    <li>Less strict keyconfig file reading
+    <li>Coding design
+    <li>Tabs can be dropped on the window as well  (if the sloppy window grouping is on)
+    <li>Tab width is configured for each screen
+    <li>Tab cycling
+    <li>"Maximize over slit" option
+    <li>Lower window with mouse button 3
+    <li>You can now comment lines in keys config file  (commented lines must start with a #)
+    <li>You can now click to raise window while you are in sloppy focus mode
+    </ul>
+
+    And of course a bunch of bugfixes:
+    <ul>
+    <li>Close button (aterm, eterm etc)
+    <li>Keys memory leak
+    <li>Keybinding bug
+    <li>Withdraw state fixed (opera will not open another instance if there is one already opened)
+    <li>Slit OnTop while Toolbar OnTop
+    <li>Alt + resize and pressing button 1
+    <li>Tab toggle texture/position
+    <li>Windowmenu bug when resizing with num/caps/scrollock on
+    <li>Shade bug in Windowmenu
+    <li>Sticky toggle bug in Windowmenu
+    <li>Tab/Iconbar resource
+    <li>Crash on no title (the slit apps)
+    </ul>
+
+    Don't wait any longer - <a href="http://prdownloads.sourceforge.net/fluxbox/fluxbox-0.1.6.tar.gz">get the sources here</a> and check the <a href="/changelog.php">Changelog</a>.<br>
+    The binaries will be available in the next days.
+
+
+1010240760:
+  title: Mailing lists are up!
+  author: aleczapka
+  content: |+
+    We have set up two mailing lits: one for <a href="http://lists.sourceforge.net/lists/listinfo/fluxbox-users">fluxbox-users</a>
+     and the second for <a href="http://lists.sourceforge.net/lists/listinfo/fluxbox-devel">fluxbox-developers</a>. Check the <a href="http://sourceforge.net/mail/?group_id=35398">mailing list info page for details</a> and subscribe.
+
+
+1010210100:
+  title: New goodies!
+  author: aleczapka
+  content: |+
+    Thx to Han again, we have a bunch of new packages for Mandrake (also MandrakePPC), OpenBSD-port and rpm-snapshot-generator for RPM based distros.
+    You'd better check the <a href="/download.php">download</a> site yourselfs.<br>
+    I've made also a few updates in <a href="/docs.php">documentation</a> and added <a href="/docs/keys.php">List of valid keys actions</a> which you can assign to the shortcuts.<br>
+    Check also updated <a href="/docs/faq.php">FAQ</a>.
+
+
+1009925520:
+  title: OpenBSD package is here
+  author: aleczapka
+  content: |+
+    Thx to <a href="mailto:han@mijncomputer.nl">Han</a> we have now also the OpenBSD package.
+    Check the <a href="/docs/openbsd-pack-readme.php">README</a> and <a href="http://www.xs4all.nl/~hanb/software/fluxbox/fluxbox-0.1.5-openbsd-i386.tgz">get it</a>.
+
+
+1009878480:
+  title: Daily CVS
+  author: aleczapka
+  content: |+
+    Fluxbox CVS is up. If you want to be up to date with rapidly developed, kewl window manager,
+    download Fluxbox <a href="http://cvs.sourceforge.net/cvstarballs/fluxbox-cvsroot.tar.gz">Daily CVS snapshot</a> or browse <a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/fluxbox/">CVS online repository</a>.
+    Don't forgett to <a href="http://sourceforge.net/tracker/?group_id=35398">tell us</a> about bugs you (eventually:) find.<br>
+    Besides that: Happy New Year to all FluxFans!
+
+
+
+1009494360:
+  title: NetBSD package is comming to town
+  author: aleczapka
+  content: |+
+    Thx to <a href="mailto:pekdon@babblica.net">pekdon</a> we have now, Fluxbox package for NetBSD users. Check out the <a href="/docs/netbsd-pack-readme.php">README</a>, and <a href="http://pekdon.babblica.net/files/fluxbox-0.1.5-netbsd-1.5.2-i386.tgz">download it here</a>.
+
+
+1009295700:
+  title: New Themes
+  author: aleczapka
+  content: |+
+    <a href="/themes.php"><img src="/images/themes/contrib/aki_kharisma-.jpg" align=left border=0 hspace=5 vspace=5></a>
+    X-mas time, so we have a few gifts for all Fluxbox fr34ks out there - bunch of new <a href="/themes.php">themes</a> contributed by FluxFans.
+    <a href="/themes.php">Check</a> them out.<br>
+    Thx all for submitting.<br>
+    I keep working on some nice scripts which will make theme submitting/browsing easier for you and us,
+    so till the scripts are not ready I will not upload new themes, however you can still send them over.
+
+
+1008582000:
+  title: <A href="docs.php">Documentation</A>
+  author: skypher
+  content: |+
+    Finally we have someone who will be dedicated to provide some good fluxbox documentation!<BR> The guy is <a href="mailto:stantoncook@ozemail.com.au">dyclops</A> and his first project will probably be a doc on "non-blackbox things" in fluxbox - thanks a lot for helping out.
+
+
+1008546660:
+  title: Bbtools bugfix
+  author: aleczapka
+  content: |+
+    Yup, for all of you who got problems using bbtools with v0.1.5 Henrik has prepared <a href="/download/patches/fluxbox-0.1.5.bbtools-buggfix1.patch">patch</a>, so grab it, apply, recompile and keep everybody telling that fluxbox rox :).
+    <blockquote>
+    <code>patch -p0 < fluxbox-0.1.5.buggfix1.patch</code>
+    </blockquote>
+
+    Put the patch in the parent directory where you keep your fluxbox sources,
+    e.g. <code>/usr/src/fluxbox-0.1.5</code> so the patch should go into <code>/usr/src/</code>.
+
+1008507660:
+  title: Slack packet
+  author: skypher
+  content: |+
+    Thanks to <a href="mailto:rebelo@shaw.ca">jar</A> we now have a slackware packet for you! grab it right <a href="/download/fluxbox-0.1.5.tgz">here</A> (be sure to read the fluxbox slack pack <a href="/docs/slack-pack-readme.php">README</A> as well).<BR>
+    The FAQ is also slightly updated, look <a href="/docs/faq.php">at it</A>.
+
+
+1008368880:
+  title: Themes
+  author: aleczapka
+  content: |+
+    We have a few new <a href="/themes.php">themes</a> for you, so check it out. They are not included with Fluxbox because they are quite big all together (background pics).<br>
+    Themes section should be fully opened in the next week, so in a meantime keep sending your fluxbox styles.<br>
+    And if you didn't notice we got a bunch of new <a href="/screenshots.php">screenshots</a> already. Thanks all who submitted them.
+
+1008228720:
+  title: Fluxbox's site relaunches
+  author: aleczapka
+  content: |+
+    New site design and new features. We have now <a href="/screenshots.php">screenshots section</a>
+    where you can send your rockin' fluxbox desktopz. The <a href="/docs.php">documentation page</a> it's quite small yet, but we are going to update it in next weeks.
+    Also the 'Themes' section will fill up soon with the cool Fluxbox styles.
+    Your favourite WM is counting on you - <a href="/themes.php">submit the themes now</a>!
+
+
+1007815800:
+  title: Fluxbox v0.1.5. is out!
+  author: Henrik
+  content: |+
+    0.1.5 is finally here! major code updates, a couple of new features.
+    All in all another big update for the window manager for powerusers[tm] ;)
+    Please note that the "tab-placement":/features/tabs.php code is still rather beta, so expect it to be better/more stable in the next release.
+    And as usual, take a peek in the "ChangeLog":/changelog.php for all the delicious new stuff.
+    By the way to convert your old bbkeys conf-files (.bbkeysrc) to fluxbox new keygrabber's syntax, get "this":/download/convertkeys or "this":/download/convertkeys2 script (both do the same thing) or read this little "description":/docs/fbgrab.php.
+
