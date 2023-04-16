@@ -1,15 +1,15 @@
 title: "fluxbox"
 subtitle: "The Window Manager"
-copyright: "Copyright © 2001–2023, The Fluxbox Team."
-baseURL: "/"
-languageCode: 'en-us'
-#theme: "hugo-book"
-paginate: 5
+copyright: "Copyright © 2001–2025, The Fluxbox Team."
+languageCode: "en-us"
+theme: "hugo-book"
+pagination:
+    pagerSize: 23
 menu:
-  after:
-    - name: "Github"
-      url: "https://github.com/fluxbox/fluxbox"
-      weight: 100
+    after:
+        - name: "Github"
+          url: "https://github.com/fluxbox/fluxbox"
+          weight: 100
 #  main:
 #    - name: News
 #      url: "/news"
@@ -25,40 +25,39 @@ menu:
 #    - name: Help
 #      url: "/help"
 params:
-  # theme: book
-  BookSection: '*'
-  BookComments: false
-  # theme: terminal
-  fullWidthTheme: false
-  centerTheme: true
-  Toc: true
-  Logo:
-    logoText: "fluxbox"
+    # theme: book
+    BookSection: "*"
+    BookComments: false
+    fullWidthTheme: false
+    centerTheme: true
+    Toc: true
+    Logo:
+        logoText: "fluxbox"
 
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
+    goldmark:
+        renderer:
+            unsafe: true
 
 privacy:
-  disqus:
-    disable: false
-  googleAnalytics:
-    anonymizeIP: false
-    disable: false
-    respectDoNotTrack: false
-    useSessionStorage: false
-  instagram:
-    disable: false
-    simple: false
-  twitter:
-    disable: false
-    enableDNT: false
-    simple: false
-  vimeo:
-    disable: false
-    enableDNT: false
-    simple: false
-  youtube:
-    disable: false
-    privacyEnhanced: false
+    disqus:
+        disable: false
+    googleAnalytics:
+        anonymizeIP: false
+        disable: false
+        respectDoNotTrack: false
+        useSessionStorage: false
+    instagram:
+        disable: false
+        simple: false
+    twitter:
+        disable: false
+        enableDNT: false
+        simple: false
+    vimeo:
+        disable: false
+        enableDNT: false
+        simple: false
+    youtube:
+        disable: false
+        privacyEnhanced: false

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="markdown book-post">
+    {{ .Content }} 
+    <ul>
+    {{ range sort .Paginator.Pages }}
+    <li class="markdown book-post">
+        <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+    </li>{{ end }}
+    </ul>
+</div>
+
+{{ template "_internal/pagination.html" . }} {{ end }}

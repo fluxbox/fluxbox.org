@@ -1,3 +1,6 @@
+---
+weight: 2
+---
 # NAME
 
 startfluxbox - start a fluxbox session
@@ -16,7 +19,7 @@ startx, or **~/.xsession** if you run a display manager, like xdm.
 
 # FILES
 
-**~/.fluxbox/startup**  
+**~/.fluxbox/startup**
 This file contains all commands that should be executed before fluxbox
 is started. The initial file contains helpful comments for beginners. It
 also starts fluxbox.

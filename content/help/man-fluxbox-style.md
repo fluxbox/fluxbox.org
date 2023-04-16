@@ -1,3 +1,6 @@
+---
+weight: 6
+---
 # NAME
 
 fluxbox-style - A comprehensive look at styles/themes for fluxbox(1).

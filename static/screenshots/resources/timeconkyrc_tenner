@@ -1,0 +1,125 @@
+# set to yes if you want tormo to be forked in the background
+background no
+
+#cpu_avg_samples 3
+#net_avg_samples 3
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+#xftfont Bitstream Vera Sans:size=8
+#xftfont calibri:size=34:bold
+#xftfont Arial:size=8
+
+# Text alpha when using Xft
+xftalpha 0.8
+
+# mail spool
+#mail_spool $MAIL
+
+# Update interval in seconds
+update_interval 0.5
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_transparent yes
+own_window_hints	undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size		99 50
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders yes
+
+# Stippled borders?
+stippled_borders 8
+
+# border margins
+border_margin 4
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color white
+default_shade_color black
+default_outline_color black
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 5
+gap_y 117
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# boinc (seti) dir
+# seti_dir /opt/seti
+
+#xmms_player infopipe
+
+#${font -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-1}${color #078ba4}v:$mpd_vol $mpd_artist - $mpd_title
+#${color #17afaa}${time %x :: %T}
+
+
+
+# stuff after 'TEXT' will be formatted on screen
+#[ $nodename $kernel on $machine ]
+#${color #f7f7f7}${font Bitstream Vera Sans:size=18}${time %H%M}
+
+# fast schwarz ${color #383838}
+# fast weiss   ${color #f7f7f7}
+# dunkelgruen  ${color #318043}
+# bordaux      ${color #AA4C4FE5898C}
+
+#${color #ffffff}${font calibri:size=25:bold}${time %H.%M}
+#${font calibri:size=1:bold}
+#${font Bitstream Vera Sans Mono:size=9:bold}  up: ${upspeedf eth0}
+#${font Bitstream Vera Sans Mono:size=9:bold}down: ${downspeedf eth0}
+
+#${color #ffffff}${font calibri:size=30:bold}${time %H}${color #ffffff}${font calibri:size=20}.${time %M}
+#${font calibri:size=2:bold}
+#${font calibri:size=8:bold}
+#${cpubar 4}
+#${membar 4}
+
+
+TEXT
+${font Bitstream Vera Sans Mono:size=11:bold}${time %d %b %G}
+${font calibri:size=4:bold}
+${cpubar 7}
+${font calibri:size=4:bold}
+${membar 7}
+${font calibri:size=4:bold}
+${upspeedgraph eth0 7,99 ffffff ffffff}
+${font calibri:size=4:bold}
+${downspeedgraph eth0 7,99 ffffff ffffff}
+${font calibri:size=4:bold}
+${font calibri:size=0:bold}
+${if_mounted /media/cdrom0}${font Bitstream Vera Sans Mono:size=8:bold}${color #ffffff}dvd ${color #AA4C4F}${fs_bar 7 /media/cdrom0}$endif
+${font calibri:size=0:bold}
+${if_mounted /media/cdrom1}${font Bitstream Vera Sans Mono:size=8:bold}${color #ffffff}bnr ${color #AA4C4F}${fs_bar 7 /media/cdrom1}$endif
+${font calibri:size=0:bold}
+${if_mounted /media/windoz}${font Bitstream Vera Sans Mono:size=8:bold}${color #ffffff}win ${color #AA4C4F}${fs_bar 7 /windoz}$endif
+${font calibri:size=0:bold}
+${if_mounted /media/stick}${font Bitstream Vera Sans Mono:size=8:bold}${color #ffffff}usb ${color #AA4C4F}${fs_bar 7 /stick}$endif
+${font calibri:size=0:bold}
+${if_mounted /media/player}${font Bitstream Vera Sans Mono:size=8:bold}${color #ffffff}mp3 ${color #AA4C4F}${fs_bar 7 /player}$endif
+

@@ -18,4 +18,5 @@ cr-manpages: content/help/man-startfluxbox.md
 
 content/help/man-%.md: $(FLUXBOX_SRC)/doc/asciidoc/%.txt
 	asciidoctor -b docbook -o - $^ |\
-	pandoc -f docbook -t markdown_strict - -o $@
+	pandoc -f docbook -t markdown_strict - -o - |\
+	python3 utils/number-manpages.py $(notdir $@) > $@

@@ -11,5 +11,3 @@ bookCollapseSection: true
 # What's happened lately in the fluxbox world?
 
 Find announces in here, updates, statements and so on.
-
-{{<section>}}

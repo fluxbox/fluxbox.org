@@ -1,3 +1,6 @@
+---
+weight: 4
+---
 # NAME
 
 fluxbox-menu - fluxbox(1) menu syntax
@@ -52,7 +55,7 @@ changes should be taken into account the next time you open the menu.
 The root menu must begin with a **\[begin\]** tag and end with an
 **\[end\]** tag, and every tag must be on its own line.
 
-There are up to four fields in a menu line. They are of the form  
+There are up to four fields in a menu line. They are of the form
 \[*tag*\] (*label*) {*command*} &lt;'icon'&gt;
 
 The &lt;'icon'&gt; field is always optional when shown below. If
@@ -70,13 +73,13 @@ You may enter labels, commands, and icons using characters from any
 
 ## Structural Tags
 
-**\[begin\]** (*title*)  
+**\[begin\]** (*title*)
 This tells fluxbox to start parsing the menu file. This tag is required
 for fluxbox to read your menu file. If it cannot find it, the system
 default menu is used in its place. The *title* appears at the top of the
 menu. And **\[end\]** tag is required to end the menu.
 
-**\[submenu\]** (*label*) {*title*} &lt;'icon'&gt;  
+**\[submenu\]** (*label*) {*title*} &lt;'icon'&gt;
 This tells fluxbox to create and parse a new menu, which is inserted as
 a submenu into the parent menu. These menus are parsed recursively, so
 there is no limit to the number of levels or nested submenus you can
@@ -85,33 +88,33 @@ the *title* is shown at the top of the submenu. If omitted, the *title*
 will be the same as the *label*. An **\[end\]** tag is required to end
 the submenu.
 
-**\[end\]**  
+**\[end\]**
 This tells fluxbox that it is at the end of a menu. This can either be a
 **\[submenu\]** or the **\[begin\]** tag of the main root menu. There
 must be at least one of these tags in your menu to correspond to the
 required **\[begin\]** tag, and one for each **\[submenu\]**.
 
-**\[encoding\]** {*encoding*}  
+**\[encoding\]** {*encoding*}
 This begins an **\[encoding\]** section and specifies the string
 encoding of all strings until the matching **\[endencoding\]** tag. For
 a list of available encodings on your system, run **iconv -l**.
 
-**\[endencoding\]**  
+**\[endencoding\]**
 This ends an **\[encoding\]** section.
 
-**\[include\]** (*path*)  
+**\[include\]** (*path*)
 Parses the file specified by filename inline with the current menu. The
 *path* can be the full path to a file or it can begin with **~/**, which
 will be expanded into your home directory. If *path* is a directory,
 then all files in that directory are included.
 
-**\[separator\]**  
+**\[separator\]**
 This will create a nice separation line. Useful for splitting up
 sections in a “pretty” way. The optional *comment* is not displayed, but
 can be useful for internal documentation or script parsing of menu
 files.
 
-**\[nop\]** (*label*) &lt;'icon'&gt;  
+**\[nop\]** (*label*) &lt;'icon'&gt;
 Insert a non-operational item into the current menu. This is much like
 **\[separator\]**, but instead of a line, it inserts a *label*. This can
 be used to help format the menu into blocks or sections if so desired.
@@ -119,7 +122,7 @@ The *label* is optional, and if omitted a blank item will be inserted.
 
 ## Applications
 
-**\[exec\]** (*label*) {*command…​*} &lt;'icon'&gt;  
+**\[exec\]** (*label*) {*command…​*} &lt;'icon'&gt;
 Inserts a command item into the menu. When you select the menu item from
 the menu, fluxbox runs *command…​* in your **$SHELL** (or /bin/sh if
 $SHELL is not set). You can use this to launch applications, run shell
@@ -130,40 +133,40 @@ fluxbox started (such as in ~/.fluxbox/startup).
 
 ## Fluxbox Functions
 
-**\[config\]** (*label*) &lt;'icon'&gt;  
+**\[config\]** (*label*) &lt;'icon'&gt;
 Inserts a fluxbox native submenu item, containing numerous configuration
 options concerning window placement, focus style, window moving style,
 etc. See **Configuration Menu** in **fluxbox(1)** for details.
 
-**\[reconfig\]** (*label*) &lt;'icon'&gt;  
+**\[reconfig\]** (*label*) &lt;'icon'&gt;
 When selected this item re-reads the current style and menu files and
 applies any changes. This is useful for creating a new style or theme,
 as you don’t have to constantly restart fluxbox every time you save your
 style. However, fluxbox automatically rereads the menu whenever it
 changes.
 
-**\[restart\]** (*label*) {*command*} &lt;'icon'&gt;  
+**\[restart\]** (*label*) {*command*} &lt;'icon'&gt;
 This tells fluxbox to restart. If *command* is supplied, it shuts down
 and runs the command (which is commonly the name of another window
 manager). If *command* is omitted, fluxbox restarts itself.
 
-**\[exit\]** (*label*) &lt;'icon'&gt;  
+**\[exit\]** (*label*) &lt;'icon'&gt;
 Inserts an item that shuts down and exits fluxbox. Any open windows are
 reparented to the root window before fluxbox exits.
 
-**\[style\]** (*label*) {*filename*} &lt;'icon'&gt;  
+**\[style\]** (*label*) {*filename*} &lt;'icon'&gt;
 This tells fluxbox to insert an item that, when selected, reads style
 file named filename and apply the new textures, colors and fonts to the
 current running session.
 
-**\[stylesmenu\]** (*directory*) &lt;'icon'&gt;  
+**\[stylesmenu\]** (*directory*) &lt;'icon'&gt;
 Reads all filenames from the specified directory, assuming that they are
 all valid style files, and creates inline menu items in the current menu
 for every filename, that, when selected by the user will apply the
 selected style file to the current session. The labels that are created
 in the menu are the filenames of the style files.
 
-**\[stylesdir\]** (*label*) {*directory*} &lt;'icon'&gt;  
+**\[stylesdir\]** (*label*) {*directory*} &lt;'icon'&gt;
 Creates a submenu entry with *label* (that is also the title of the new
 submenu), and inserts in that submenu all filenames in the specified
 *directory*, assuming that they are all valid style files (directories
@@ -171,15 +174,15 @@ are ignored) in the same way as the **\[stylesdir\]** command does. Both
 **\[stylesdir\]** and **\[stylesmenu\]** commands make it possible to
 install style files without editing your init file.
 
-**\[wallpapers\]** (*directory*) {*command*} &lt;'icon'&gt;  
+**\[wallpapers\]** (*directory*) {*command*} &lt;'icon'&gt;
 This inserts a menu item to set the wallpaper for each file in the given
 directory. The *command* is optional, and defaults to **fbsetbg**.
 
-**\[workspaces\]** (*label*) &lt;'icon'&gt;  
+**\[workspaces\]** (*label*) &lt;'icon'&gt;
 This tells fluxbox to insert a link to the workspaces menu directly into
 your menu. See **Workspace Menu** in **fluxbox(1)** for details.
 
-**\[***command***\]** (*label*) &lt;'icon'&gt;  
+**\[***command***\]** (*label*) &lt;'icon'&gt;
 In addition to the commands above, any legal keys file *command* may be
 used as a menu item. See **fluxbox-keys(5)** for more information.
 
@@ -193,16 +196,16 @@ each must be on a line by itself with no labels, commands, or icons.
 
 The additonal available tags in this menu are:
 
-**\[shade\]**  
+**\[shade\]**
 Provides a menu item to shade or unshade (or, roll-up) the window. This
 is equivalent to the shade titlebar button.
 
-**\[stick\]**  
+**\[stick\]**
 Provides a menu item to stick or unstick the window. Stuck windows are
 displayed on all workspaces. This is equivalent to the stick titlebar
 button.
 
-**\[maximize\]**  
+**\[maximize\]**
 Provides a menu item to maximize or unmaximize the window, equivalent to
 the maximize titlebar button. The button with which you click alters the
 behaviour of this item as follows:
@@ -213,66 +216,66 @@ behaviour of this item as follows:
 
 -   Button 3 (Un)Maximize window horizontally.
 
-**\[iconify\]**  
+**\[iconify\]**
 Provides a menu item to iconify (or, minimize) the window, equivalent to
 the iconify titlebar button.
 
-**\[close\]**  
+**\[close\]**
 Closes the window gracefully, equivalent to the titlebar button.
 
-**\[kill\]**  
+**\[kill\]**
 Kills the window’s process, like **xkill(1)**.
 
-**\[raise\]**  
+**\[raise\]**
 Raise the window to the top of the stack within its layer.
 
-**\[lower\]**  
+**\[lower\]**
 Lower the window to the bottom of the stack within its layer.
 
-**\[settitledialog\]**  
+**\[settitledialog\]**
 Opens a dialog which can be used to set the window’s title. Some
 applications may re-set their own title from time-to-time, wiping out
 your setting.
 
-**\[sendto\]**  
+**\[sendto\]**
 Sends the window to a different workspace. When you select the workspace
 with a middle-click, fluxbox will also change to the new workspace. A
 regular click only sends the window.
 
-**\[layer\]**  
+**\[layer\]**
 Adds a “Layer…​” submenu which lets you change the layer of this window.
 
-**\[alpha\]**  
+**\[alpha\]**
 Adds a “Transparency…​” submenu which lets you change the focused and
 unfocused transparency of this window.
 
-**\[extramenus\]**  
+**\[extramenus\]**
 Adds the “Remember…​” menu item, which allows you to specify which
 settings should be stored in the “apps” file (See **fluxbox-apps(5)**
 for more details).
 
-**\[separator\]**  
+**\[separator\]**
 Adds a horizontal line to the menu
 
 # FILES
 
-**~/.fluxbox/menu**  
+**~/.fluxbox/menu**
 This is the default location for the user’s root menu.
 
-**@pkgdatadir@/menu**  
+**@pkgdatadir@/menu**
 This is the system-wide root menu file. It will be used if the user’s
 root menu is missing or unparseable.
 
-**~/.fluxbox/windowmenu**  
+**~/.fluxbox/windowmenu**
 This is the user’s window menu definition file
 
-**@pkgdatadir@/menu**  
+**@pkgdatadir@/menu**
 This is the default window menu. If the user does not have this file, it
 will be copied to **~/.fluxbox/windowmenu** on fluxbox startup.
 
 # RESOURCES
 
-**session.menuFile:** *location*  
+**session.menuFile:** *location*
 This may be set to override the location of the user’s root menu.
 
 # ENVIRONMENT

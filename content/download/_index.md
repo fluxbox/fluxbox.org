@@ -15,10 +15,10 @@ of the improvements.
 
 The source tarballs for the latest release can be found here:
 
-* 1.3.7 Source tarball (gz)
-* 1.3.7 Source tarball (bz2)
-* 1.3.7 Source tarball (xz)
-    
+* [1.3.7 Source tarball (gz)](https://sourceforge.net/projects/fluxbox/files/fluxbox/1.3.7/fluxbox-1.3.7.tar.gz/download)
+* [1.3.7 Source tarball (bz2)](https://sourceforge.net/projects/fluxbox/files/fluxbox/1.3.7/fluxbox-1.3.7.tar.bz2/download)
+* [1.3.7 Source tarball (xz)](https://sourceforge.net/projects/fluxbox/files/fluxbox/1.3.7/fluxbox-1.3.7.tar.xz/download)
+
 The source tarballs of all releases can be found on the fluxbox-project-page
 on sourceforge.net.
 
@@ -59,4 +59,3 @@ repositories are:
 * klowner's site
 * deviantart
 * customize.org
-

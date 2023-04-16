@@ -1,3 +1,6 @@
+---
+weight: 5
+---
 # NAME
 
 fluxbox-apps - per-window attribute configuration for fluxbox(1)
@@ -36,7 +39,7 @@ detailed below.
 **\[app\]** sections provide settings for individual application
 windows.
 
-These sections begin with a line of the format  
+These sections begin with a line of the format
 **\[app\]** **(***pattern***)** **{***count***}**
 
 The *pattern* can be one or more patterns which match windows. For more
@@ -50,7 +53,7 @@ default is to apply the settings to all matching windows.
 This opening **\[apps\]** line is followed by any number of settings for
 the application. See **SETTINGS** for more details.
 
-Each of these sections ends with the single line  
+Each of these sections ends with the single line
 **\[end\]**
 
 # TRANSIENT SECTIONS
@@ -67,7 +70,7 @@ remain above. Notably, open/save dialogs fall into this category.
 The primary purpose of **\[group\]** sections is to group windows
 together. All windows in a group will be tabbed together automatically.
 
-These sections begin with a line of the format  
+These sections begin with a line of the format
 **\[group\]** **(***pattern***)**
 
 Where the *pattern* item is optional. If specified, this pattern must
@@ -80,13 +83,13 @@ similar format to the **\[app\]** section detailed above in **APP
 SECTIONS**, but do not contain any settings and do not have an
 associated **\[end\]** line.
 
-Like this  
+Like this
 **\[app\]** **(***pattern***)**
 
 This section may also contain settings that are applied to every window
 in the group. See the **SETTINGS** section for details.
 
-As with **\[app\]** sections, each of these sections ends with the single line  
+As with **\[app\]** sections, each of these sections ends with the single line
 **\[end\]**
 
 # SETTINGS
@@ -94,44 +97,44 @@ As with **\[app\]** sections, each of these sections ends with the single line
 These settings may be stored in the “apps” file. A settings line must
 appear inside either an **\[app\]** or **\[group\]** section.
 
-The general format is  
+The general format is
 **\[***setting***\]** **{***value***}**
 
 All allowed values are described below, except for *bool* which can
 simply have the value **yes** or **no**, which enables or disables the
 associated setting, respectively.
 
-**\[Workspace\]** {*number*}  
+**\[Workspace\]** {*number*}
 Forces the application to open on the *number* workspace specified.
 Workspaces are set by number, beginning with 0.
 
-**\[Jump\]** {*bool*}  
+**\[Jump\]** {*bool*}
 Changes the active workspace to the remembered one when the application
 is opened. This is only useful when used in conjunction with
 *\[Workspace\]*. See **EXAMPLES**.
 
-**\[Head\]** {*number*}  
+**\[Head\]** {*number*}
 Forces the application to open on the *number* head specified (Xinerama
 only).
 
-**\[Layer\]** {*number*}  
+**\[Layer\]** {*number*}
 Specify the layer to open the window on (by number). Each layer has a
 number. The named ones are: 2-AboveDock, 4-Dock, 6-Top, 8-Normal,
 10-Bottom, 12-Desktop.
 
-**\[Dimensions\]** {*width\[%\]* *height\[%\]*}  
+**\[Dimensions\]** {*width\[%\]* *height\[%\]*}
 Opens the application with the specified *width* and *height*, in
 pixels. If the value is given in percent, then the window size will be
 based on the current screen’s size.
 
-**\[IgnoreSizeHints\]** {*bool*}  
+**\[IgnoreSizeHints\]** {*bool*}
 Some Applications restrict the aspect ratio, minimum or maximum size of
 windows. Setting this key "yes" will make fluxbox ignore those
 constraints. **NOTICE** that bad client implementations may hard depend
 on these constraints (by blindly using their geometry in unsave
 calculations, causing div-by-zero segfaults etc.)
 
-**\[Position\]** (*anchor*) {*X\[%\]* *Y\[%\]*}  
+**\[Position\]** (*anchor*) {*X\[%\]* *Y\[%\]*}
 Position the application at a particular spot. By default the upper-left
 corner is placed at screen coordinates (*X*,*Y*). If you specify an
 *anchor*, say BottomRight, then the lower-right corner of the window is
@@ -139,27 +142,27 @@ positioned (*X*,*Y*) pixels from the lower-right corner of the screen.
 If the value is given in percent, then the coordinates will be based on
 the current screen’s size.
 
-*anchor* may be set to one of:  
+*anchor* may be set to one of:
 **TopLeft Left BottomLeft Top Center Bottom TopRight Right BottomRight**
 
-**\[Deco\]** {*value*}  
-Specify the decoration state. There are several predefined *value* sets:  
-**NORMAL**  
+**\[Deco\]** {*value*}
+Specify the decoration state. There are several predefined *value* sets:
+**NORMAL**
 Standard decorations
 
-**NONE**  
+**NONE**
 No decorations
 
-**BORDER**  
+**BORDER**
 Like NONE except keep the X window border
 
-**TAB**  
+**TAB**
 Like BORDER except keep external tabs (if enabled)
 
-**TINY**  
+**TINY**
 Titlebar with only an iconify button
 
-**TOOL**  
+**TOOL**
 Titlebar only
 
 The *value* may also be a bitmask for finer-grained control. The bits
@@ -167,79 +170,79 @@ are, from (1&lt;&lt;0) to (1&lt;&lt;10): Titlebar, Handle/Grips, Border,
 Iconify Button, Maximize Button, Close Button, Menu Button, Sticky
 Button, Shade Button, External Tabs, Focus Enabled.
 
-**\[Shaded\]** {*bool*}  
+**\[Shaded\]** {*bool*}
 Whether the window is Shaded (rolled-up) or not.
 
-**\[Tab\]** {*bool*}  
+**\[Tab\]** {*bool*}
 Whether the window has tabs enabled.
 
-**\[FocusNewWindow\]** {*bool*}  
-**DEPRECATED!** Please use FocusProtection "Gain" or "Refuse" instead.  
+**\[FocusNewWindow\]** {*bool*}
+**DEPRECATED!** Please use FocusProtection "Gain" or "Refuse" instead.
 If enabled, a new window will grab X focus as soon as it is opened. If
 disabled, a new window will not grab X focus as soon as it is opened.
 
-**\[FocusProtection\]** {*value* \[,*value* \[, …​\]\] }  
-Comma separated list of focus controlling flags. *value* may be:  
-**None**  
+**\[FocusProtection\]** {*value* \[,*value* \[, …​\]\] }
+Comma separated list of focus controlling flags. *value* may be:
+**None**
 Regular behavior
 
-**Gain**  
+**Gain**
 A new window will grab X focus as soon as it is opened.
 
-**Refuse**  
+**Refuse**
 A new window will not grab X focus as soon as it is opened.
 
-**Deny**  
+**Deny**
 The window is not allowed to claim focus while it is opened.
 
-**Lock**  
+**Lock**
 No window is allowed to claim the focus while this window has it.
 
 Please notice that technically, windows may still obtain the focus which
 is then however reverted by the WM. In case you’re very unlucky, a key
 event may thus still go to the wrong window.
 
-**\[FocusHidden\]** {*bool*}  
+**\[FocusHidden\]** {*bool*}
 If enabled, the window will not appear in *NextWindow*/*PrevWindow*
 lists.
 
-**\[IconHidden\]** {*bool*}  
+**\[IconHidden\]** {*bool*}
 If enabled, the window will not appear in the icon area of the toolbar.
 
-**\[Hidden\]** {*bool*}  
+**\[Hidden\]** {*bool*}
 A shortcut for setting both **FocusHidden** and **IconHidden** at the
 same time.
 
-**\[Sticky\]** {*bool*}  
+**\[Sticky\]** {*bool*}
 Specify if an application should be sticky (shown on all workspaces) or
 not.
 
-**\[Minimized\]** {*bool*}  
+**\[Minimized\]** {*bool*}
 Application should start minimized
 
-**\[Maximized\]** {*value*}  
-Application should start maximized. *value* may be:  
-**yes**  
+**\[Maximized\]** {*value*}
+Application should start maximized. *value* may be:
+**yes**
 Fully maximized
 
-**horz**  
+**horz**
 Horizontally maximized
 
-**vert**  
+**vert**
 Vertically maximized
 
-**no**  
+**no**
 Not maximized
 
-**\[Fullscreen\]** {*bool*}  
+**\[Fullscreen\]** {*bool*}
 Application should start in fullscreen mode (fully maximized without any
 decorations).
 
-**\[Close\]** {*bool*}  
+**\[Close\]** {*bool*}
 Save settings on close. By default, application settings are not updated
 when a window is closed.
 
-**\[Alpha\]** {*value* \[*value*\]}  
+**\[Alpha\]** {*value* \[*value*\]}
 Set the alpha value for this window. If two values are given, they
 correspond to the focused and unfocused transparency, respectively. One
 number only will be used for both values. *value* is an integer between
@@ -247,7 +250,7 @@ number only will be used for both values. *value* is an integer between
 
 # CLIENT PATTERNS
 
-A *pattern* looks like this  
+A *pattern* looks like this
 **(**\[*propertyname*\[!\]=\]*regexp***)** …​
 
 Match definitions are enclosed in parentheses **(**…​**)**, and if no
@@ -263,92 +266,92 @@ condition - All specified patterns must match.
 
 You can use **=** to test for equality or **!=** to test for inequality.
 
-The following values are accepted for *propertyname*  
-**Name**  
+The following values are accepted for *propertyname*
+**Name**
 A string, corresponding to the CLASSNAME property (The first field of
 WM\_CLASS from the output of the **xprop(1)** utility).
 
-**Class**  
+**Class**
 A string, corresponding to the CLASSCLASS property (The second field of
 WM\_CLASS from the output of the **xprop(1)** utility).
 
-**Title**  
+**Title**
 A string, corresponding to the window title (WM\_NAME from
 **xprop(1)**).
 
-**Role**  
+**Role**
 A string, corresponding to the ROLE property (WM\_WINDOW\_ROLE from
 **xprop(1)**).
 
-**Transient**  
+**Transient**
 Either **yes** or **no**, depending on whether the window is transient
 (typically, a popup dialog) or not.
 
-**Maximized**  
+**Maximized**
 Either **yes** or **no**, depending on whether the window is maximized
 or not.
 
-**MaximizedHorizontal**  
+**MaximizedHorizontal**
 Either **yes** or **no**, depending on whether the window is maximized
 horizontally or not.
 
-**MaximizedVertical**  
+**MaximizedVertical**
 Either **yes** or **no**, depending on whether the window is maximized
 vertically or not.
 
-**Minimized**  
+**Minimized**
 Either **yes** or **no**, depending on whether the window is minimized
 (iconified) or not.
 
-**Fullscreen**  
+**Fullscreen**
 Either **yes** or **no**, depending on whether the window is fullscreen
 or not.
 
-**Shaded**  
+**Shaded**
 Either **yes** or **no**, depending on whether the window is shaded or
 not.
 
-**Stuck**  
+**Stuck**
 Either **yes** or **no**, depending on whether the window is sticky (on
 all workspaces) or not.
 
-**FocusHidden**  
+**FocusHidden**
 Either **yes** or **no**, depending on whether the window has asked to
 be left off the focus list (or, the alt-tab list), or not.
 
-**IconHidden**  
+**IconHidden**
 Either **yes** or **no**, depending on whether the window has asked to
 be left off the icon list (or, the taskbar), or not.
 
-**Urgent**  
+**Urgent**
 Either **yes** or **no**, depending on whether the window has the urgent
 hint set.
 
-**Workspace**  
+**Workspace**
 A number corresponding to the workspace number to which the window is
 attached. The first workspace here is **0**. You may also use
 **\[current\]** to match the currently visible workspace.
 
-**WorkspaceName**  
+**WorkspaceName**
 A string corresponding to the name of the workspace to which the window
 is attached.
 
-**Head**  
+**Head**
 The number of the display head to which the window is attached. You may
 match this against the special value **\[mouse\]** which refers to the
 head where the mouse pointer currently resides.
 
-**Layer**  
+**Layer**
 The string name of the window’s layer, which is one of **AboveDock**,
 **Dock**, **Top**, **Normal**, **Bottom**, **Desktop**
 
-**Screen**  
+**Screen**
 The number of the currently used *screen*. If the setup of the running
 xserver involves independent screens (*not Xinerama*), the $DISPLAY
 environment contains something like *:0.1* or *:1.0*. The part after the
 dot (*.*) is the number of the screen.
 
-**@XPROP**  
+**@XPROP**
 A string, corresponding to any xproperty (Use either the **xprop(1)**
 utility or the *SetXProp* command to set a xproperty to a window)
 
@@ -372,12 +375,12 @@ layer than the currently focused window**
 
 # FILES
 
-**~/.fluxbox/apps**  
+**~/.fluxbox/apps**
 This is the default location for the application settings.
 
 # RESOURCES
 
-**session.appsFile:** *location*  
+**session.appsFile:** *location*
 This may be set to override the location of the application settings.
 
 # EXAMPLES
