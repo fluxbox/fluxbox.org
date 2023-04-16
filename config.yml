@@ -1,9 +1,8 @@
 title: "fluxbox"
 subtitle: "The Window Manager"
 copyright: "Copyright © 2001–2023, The Fluxbox Team."
-baseURL: "/"
 languageCode: 'en-us'
-#theme: "hugo-book"
+theme: "hugo-book"
 paginate: 5
 menu:
   after:

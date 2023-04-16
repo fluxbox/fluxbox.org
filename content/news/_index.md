@@ -12,4 +12,8 @@ bookCollapseSection: true
 
 Find announces in here, updates, statements and so on.
 
-{{<section>}}
+{{/*<section>*/}}
+
+{{ range  .Paginator.Pages }}
+  {{ .Title }}: {{ .RelPermalink }}
+{{ end }}
