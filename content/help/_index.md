@@ -29,7 +29,7 @@ The following manpages are valid for the latest 1.3.7 release.
 ## Wiki
 
 You can get help from many places. The first location to visit should be
-fluxbox-wiki.org.
+fluxbox-wiki.github.io.
 
 ## IRC
 

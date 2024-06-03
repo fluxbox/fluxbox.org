@@ -1521,7 +1521,7 @@ This manpage is the combined work of:
 
 The Official fluxbox website: <http://www.fluxbox.org>
 
-The Official fluxbox wiki: <http://www.fluxbox-wiki.org>
+The Official fluxbox wiki: <https://fluxbox-wiki.github.io>
 
 Many compatible themes: <http://tenr.de>
 
